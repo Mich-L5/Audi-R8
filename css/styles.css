@@ -6,19 +6,19 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 65%;
+    background-color: #1d1d1d;
     background-image: url("../img/r8-front-view.jpg");
     height: 100vh;
-
 }
 
 .lights-on {
-    background-image: url("../img/r8-front-view-lights-on.jpg");
+    background-image: url("../img/r8-front-view-lights-half-on.jpg");
     transition: background-image 0.5s;
 }
 
 .lights-on-fade {
     background-image: url("../img/r8-front-view-lights-on.jpg");
-    transition: background-image 3.5s;
+    transition: background-image 4.5s;
 }
 
 .masthead-title {
@@ -45,10 +45,62 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     letter-spacing: 7px;
     padding-top: 20px;
-    padding-bottom: 150px;
+    padding-bottom: 170px;
 }
 
+.timeline {
+    /* delete height */
+    height: 100vh;
+}
 
+.close-up-logo {
+    height: 100vh;
+    background-color: #1d1d1d;
+    background-image: url("../img/close-up-audi-logo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 60%;
+
+    /* add parallax */
+}
+
+.customize {
+    /* delete height */
+    height: 100vh;
+}
+
+.close-up-wheel {
+    height: 100vh;
+    background-color: #1d1d1d;
+    background-image: url("../img/close-up-wheel.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    /* add parallax */
+}
+
+.season-proof {
+    height: 100vh;
+    background-image: url("../img/winter-audi-logo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.tbd {
+    height: 100vh;
+}
+
+.test-drive {
+    background-color: #1d1d1d;
+
+}
+
+.video-bg {
+    width: 100%;
+    height: auto;
+}
 
 
 /* Media queries - add height of masthead img to be 80%, and masthead 100vh*/
