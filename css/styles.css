@@ -1,0 +1,54 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.masthead-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 65%;
+    background-image: url("../img/r8-front-view.jpg");
+    height: 100vh;
+
+}
+
+.lights-on {
+    background-image: url("../img/r8-front-view-lights-on.jpg");
+    transition: background-image 0.5s;
+}
+
+.lights-on-fade {
+    background-image: url("../img/r8-front-view-lights-on.jpg");
+    transition: background-image 3.5s;
+}
+
+.masthead-title {
+    background-color: #1d1d1d;
+
+}
+
+.masthead-title h1 {
+    color: #f4f4f4;
+    font-weight: 300;
+    font-size: 180px;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 20px;
+    padding-top: 15px;
+}
+
+.masthead-title h2 {
+    font-family: 'Alumni Sans', sans-serif;
+    color: #f4f4f4;
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 7px;
+    padding-top: 20px;
+    padding-bottom: 150px;
+}
+
+
+
+
+/* Media queries - add height of masthead img to be 80%, and masthead 100vh*/
