@@ -1,5 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@400;500;600;700;800;900&family=Chakra+Petch:wght@300;400;500;600;700&family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+
+html, body {
+    overflow-x: hidden;
+}
+
+html {
+    height: 100%;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Chakra Petch', sans-serif;
+    color: #0e0e0e;
+}
+
+a, p, small {
+    color: #0e0e0e;
+    font-family: 'Alumni Sans', sans-serif;
+
 }
 
 .masthead-image {
@@ -18,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .lights-on-fade {
     background-image: url("../img/r8-front-view-lights-on.jpg");
-    transition: background-image 4.5s;
+    transition: background-image 4s;
 }
 
 .masthead-title {
@@ -49,9 +68,118 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .timeline {
-    /* delete height */
-    height: 100vh;
+    padding: 20px 30px 110px 30px;
+    position: relative;
 }
+
+.timeline-bar {
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 85%;
+    background-color: #e1e1e1;
+    left: 50%;
+
+}
+
+.timeline h2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: 7px;
+    padding-top: 70px;
+    margin-bottom: 120px;
+}
+
+.timeline h3 {
+    font-size: 20px;
+}
+
+.timeline small {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.timeline p {
+    font-size: 18px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    letter-spacing: 0.4px;
+
+}
+
+.timeline-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.timeline-element {
+    width: 50%;
+    position: relative;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    margin-bottom: 70px;
+}
+
+
+
+.timeline-element div {
+    background-color: #e1e1e1;
+    padding: 10px 15px;
+    margin-right: 90px;
+}
+
+
+.timeline-element img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+    right: 0;
+    margin-right: -100px;
+    padding: 5px;
+    background-color: white;
+    border: #0e0e0e dotted 2px;
+
+}
+
+/* adjust generation images on right right side */
+.timeline-right img {
+    left: 0;
+    margin-left: -190px;
+}
+
+
+.timeline-left {
+    left: 0px;
+    margin-left: -20px;
+}
+
+.timeline-right {
+    right: -50%;
+    margin-left: 110px;
+}
+
+.left-arrow {
+    border-left: 17px solid #e1e1e1;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    margin-right: 98.5px;
+}
+
+.right-arrow {
+    border-right: 17px solid #e1e1e1;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    margin-left: 8.5px;
+}
+
 
 .close-up-logo {
     height: 100vh;
@@ -61,7 +189,8 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
     background-position-y: 60%;
 
-    /* add parallax */
+    background-attachment: fixed;
+    /*test parallax on mobile*/
 }
 
 .customize {
@@ -75,9 +204,10 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url("../img/close-up-wheel.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 
-
-    /* add parallax */
+    background-attachment: fixed;
+    /*test parallax on mobile*/
 }
 
 .season-proof {
@@ -103,4 +233,103 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* Media queries - add height of masthead img to be 80%, and masthead 100vh*/
+@media screen and (max-width: 800px) {
+
+    .timeline-element img {
+        width: 120px;
+        height: 120px;
+        right: 15px;
+    }
+
+    /* adjust generation images on right right side */
+    .timeline-right img {
+        left: 15px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .timeline-element img {
+        right: 35px;
+    }
+
+    /* adjust generation images on right right side */
+    .timeline-right img {
+        left: 35px;
+    }
+
+    .timeline-left {
+        margin-left: 0px;
+    }
+
+    .timeline-right {
+        margin-left: 90px;
+    }
+
+    .masthead {
+        height: 100vh;
+    }
+
+    .masthead-title h1 {
+        font-size: 100px;
+    }
+
+    .masthead-image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        background-position-x: -15px;
+        height: 50%;
+        background-size: 105%;
+    }
+
+
+}
+
+@media screen and (max-width: 630px) {
+
+    .timeline-bar {
+        left: 80px;
+
+    }
+
+    .timeline-element img {
+        left: 0px;
+        margin: 0 0 0 -145px;
+    }
+
+    .timeline-left {
+        left: 130px;
+        margin-left: 0px;
+        padding-right: 50px;
+    }
+
+    .timeline-right {
+        left: 130px;
+        margin-left: 0px;
+        padding-right: 50px;
+    }
+
+    .timeline-element {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+
+    .left-arrow {
+        border-right: 17px solid #e1e1e1;
+        border-left: 17px solid transparent;
+        position: absolute;
+        top: 65px;
+        left: 0px;
+        margin-left: -8.5px;
+        width: 0px;
+    }
+
+
+
+
+
+}
