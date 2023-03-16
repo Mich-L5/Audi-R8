@@ -60,6 +60,10 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     var bkRimsSq = document.querySelectorAll('.wheel-selector-container img')[0];
     var glRimsSq = document.querySelectorAll('.wheel-selector-container img')[1];
 
+    // get text elements
+    var bodyColorText = document.getElementById("color-choice");
+    var rimsColorText = document.getElementById("wheel-choice");
+
     /* ------------------------- */
     /*       2. Set vars         */
     /* ------------------------- */
@@ -114,7 +118,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
 
     // CAR BODY COLOR
     // function to update customized car image when body color change occurs
-    function bodyColorChange(bodyChange, bodyAlt, sq) {
+    function bodyColorChange(bodyChange, bodyAlt, sq, colorText) {
 
         // deselected all squares (style wise)
         for (i = 0; i < allColorSq.length; i++) {
@@ -138,11 +142,14 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         let rgb = colorValue.slice(0, colorValue.length-1);
        // update the bar's color
         bar.style.backgroundImage = "linear-gradient(to right, white," + rgb + ",white)";
+
+        // update text
+        bodyColorText.innerText = colorText;
     }
 
     // CAR WHEELS/RIMS
     // function to update customized car image when rims/wheels change occurs
-    function rimsChange(rimsChange, rimsAlt, sq) {
+    function rimsChange(rimsChange, rimsAlt, sq, rimsText) {
 
         // deselected all squares (style wise)
         allRimssq[0].classList.remove("selected");
@@ -154,6 +161,9 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         rims = rimsChange;
         rimsColor = rimsAlt;
         updateImg();
+
+        // update text
+        rimsColorText.innerText = rimsText;
     }
 
     /* ------------------------- */
@@ -177,42 +187,42 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     // update custom image when square is clicked
     // black square
     bkSq.addEventListener("click", function() {
-        bodyColorChange("bk-", "black", bkSq);
+        bodyColorChange("bk-", "black", bkSq, "Mythos Black Metallic");
     });
 
     // charcoal square
     chSq.addEventListener("click", function() {
-        bodyColorChange("ch-", "charcoal", chSq);
+        bodyColorChange("ch-", "charcoal", chSq, "Daytona Grey Pearlescent");
     });
 
     // silver square
     slSq.addEventListener("click", function() {
-        bodyColorChange("sl-", "silver", slSq);
+        bodyColorChange("sl-", "silver", slSq, "Suzuka Grey Metallic");
     });
 
     // white square
     whSq.addEventListener("click", function() {
-        bodyColorChange("wh-", "white", whSq);
+        bodyColorChange("wh-", "white", whSq, "Ibis White");
     });
 
     // navy square
     nvSq.addEventListener("click", function() {
-        bodyColorChange("nv-", "navy", nvSq);
+        bodyColorChange("nv-", "navy", nvSq, "Ascari Blue Metallic");
     });
 
     // blue square
     blSq.addEventListener("click", function() {
-        bodyColorChange("bl-", "blue", blSq);
+        bodyColorChange("bl-", "blue", blSq, "Ara Blue crystal");
     });
 
     // yellow square
     ywSq.addEventListener("click", function() {
-        bodyColorChange("yw-", "yellow", ywSq);
+        bodyColorChange("yw-", "yellow", ywSq, "Vegas Yellow");
     });
 
     // red square
     rdSq.addEventListener("click", function() {
-        bodyColorChange("rd-", "red", rdSq);
+        bodyColorChange("rd-", "red", rdSq, "Tango Red Metallic");
     });
 
 
@@ -220,12 +230,12 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     // update custom image when square is clicked
     // black rims square
     bkRimsSq.addEventListener("click", function() {
-        rimsChange("bk", "black", bkRimsSq);
+        rimsChange("bk", "black", bkRimsSq, "20\" milled cut design, anthracite black wheels");
     });
 
     // gold rims square
     glRimsSq.addEventListener("click", function() {
-        rimsChange("gl", "gold", glRimsSq);
+        rimsChange("gl", "gold", glRimsSq, "20\" 5-V-spoke evo design, matte bronze wheels");
     });
 
 });
