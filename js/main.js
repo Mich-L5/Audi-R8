@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     // get img element
     var img = document.querySelector(".customize-img");
 
+    // get gradient bar element
+    var bar = document.querySelector(".color-bar");
+
     // get button elements
     var allTrimBtns = document.querySelectorAll('.car-trim-btn');
     var coupeBtn = document.querySelectorAll('.car-trim-btn')[0];
@@ -124,6 +127,17 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         body = bodyChange;
         carColor = bodyAlt;
         updateImg();
+
+        // update the gradient bar color
+        // get color square background value
+        let bgColor = sq.childNodes;
+        let bgProperty = getComputedStyle(bgColor[0]).getPropertyValue("background-image");
+        // get the color value
+        let colorValue = bgProperty.split(" ", 6);
+        colorValue = colorValue[3] + colorValue[4] + colorValue[5];
+        let rgb = colorValue.slice(0, colorValue.length-1);
+       // update the bar's color
+        bar.style.backgroundImage = "linear-gradient(to right, white," + rgb + ",white)";
     }
 
     // CAR WHEELS/RIMS
