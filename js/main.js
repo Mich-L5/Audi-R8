@@ -78,8 +78,6 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     var carColor = "black";
     var rimsColor = "black";
 
-    // toggle variable for rimsChange function
-    var rimsToggle = 0;
 
     /* ------------------------- */
     /*    3. Helper functions    */
@@ -145,16 +143,8 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     function rimsChange(rimsChange, rimsAlt, sq) {
 
         // deselected all squares (style wise)
-        // use a toggle variable - for loop was throwing an error
-        if (rimsToggle == 0) {
-            rimsToggle = 1;
-            allRimssq[0].classList.remove("selected");
-        }
-        else {
-            rimsToggle = 0;
-            allRimssq[1].classList.remove("selected");
-
-        }
+        allRimssq[0].classList.remove("selected");
+        allRimssq[1].classList.remove("selected");
 
         // only select the square that has been clicked on (style wise)
         sq.classList.add("selected");
