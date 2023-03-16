@@ -196,8 +196,12 @@ a, p, small {
 }
 
 .customize {
-    /* delete height */
-    height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .customize h2 {
@@ -209,8 +213,158 @@ a, p, small {
 .customize h3 {
     font-size: 20px;
     margin-top: 0px;
+    margin-bottom: 70px;
 
 }
+
+.customize-img {
+    width: 500px;
+    height: auto;
+    margin: 0 30px 120px 30px;
+}
+
+.car-trim-btn-container {
+    display: flex;
+    margin-bottom: 70px;
+}
+
+.car-trim-btn {
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin: 0 20px;
+    width: 110px;
+    text-align: center;
+    padding: 3px;
+    color: #0e0e0e;
+    transition: 0.5s ease all;
+    border-bottom: solid 0.5px white;
+
+}
+
+.selected-btn {
+    border: solid 0.5px #0e0e0e;
+}
+
+.unselected-btn:hover {
+    border-bottom: solid 0.5px #0e0e0e;
+}
+
+.color-selector-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.color-bar {
+    background-image: linear-gradient(to right, white,black,white);
+    width: 80%;
+    height: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-option-container {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1px;
+}
+
+.color-option {
+    display: block;
+    height: 85%;
+    width: 85%;
+    cursor: pointer;
+}
+
+.selected {
+    border: solid #0e0e0e 1px;
+}
+
+.color-option-container:nth-child(1) span {
+    background-image: linear-gradient(to bottom right, black, #696969);
+}
+
+.color-option-container:nth-child(2) span {
+    background-image: linear-gradient(to bottom right, #4b4b4b, #919191);
+}
+
+.color-option-container:nth-child(3) span {
+    background-image: linear-gradient(to bottom right, #b0b0b0, #dedcdc);
+}
+
+.color-option-container:nth-child(4) span {
+    background-image: linear-gradient(to bottom right, #ececec, #ffffff);
+}
+
+.color-option-container:nth-child(5) span {
+    background-image: linear-gradient(to bottom right, #2e4580, #6275a8);
+}
+
+.color-option-container:nth-child(6) span {
+    background-image: linear-gradient(to bottom right, #0233ff, #8098f6);
+}
+
+.color-option-container:nth-child(7) span {
+    background-image: linear-gradient(to bottom right, #f5d502, #fcf38c);
+}
+
+.color-option-container:nth-child(8) span {
+    background-image: linear-gradient(to bottom right, #a40000, #e16e6e);
+}
+
+.wheel-selector-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#color-choice, #wheel-choice {
+    font-size: 17px;
+}
+
+#color-choice {
+    margin-top: -70px;
+}
+
+.wheel-selector-container img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 35px 2px 10px 2px;
+}
+
+#wheel-choice {
+    margin-bottom: 40px;
+}
+
+
+.buy-btn {
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 45px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    margin: 30px 0 120px 0;
+    width: 200px;
+    text-align: center;
+    padding: 11px;
+    color: #0e0e0e;
+    transition: 0.5s ease all;
+    border: solid 1px #0e0e0e;
+}
+
+
 
 
 
