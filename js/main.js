@@ -99,10 +99,12 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         // deselected all buttons (style wise)
         for (i = 0; i < allTrimBtns.length; i++) {
             allTrimBtns[i].classList.remove("selected-btn");
+            allTrimBtns[i].classList.add("unselected-btn");
         }
 
         // only select the button that has been clicked on (style wise)
         btn.classList.add("selected-btn");
+        btn.classList.remove("unselected-btn");
 
         trim = trimChange;
         carTrim = trimAlt;
