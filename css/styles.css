@@ -25,15 +25,11 @@ a, p, small {
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 65%;
-    background-color: #1d1d1d;
     background-image: url("../img/r8-front-view.jpg");
     height: 100vh;
+    background-color: black;
 }
 
-.lights-on {
-    background-image: url("../img/r8-front-view-lights-half-on.jpg");
-    transition: background-image 0.5s;
-}
 
 .lights-on-fade {
     background-image: url("../img/r8-front-view-lights-on.jpg");
@@ -41,7 +37,7 @@ a, p, small {
 }
 
 .masthead-title {
-    background-color: #1d1d1d;
+    background-color: black;
 
 }
 
@@ -52,7 +48,7 @@ a, p, small {
     text-align: center;
     margin: 0 30px;
     letter-spacing: 20px;
-    padding-top: 15px;
+    padding-top: 40px;
 }
 
 .masthead-title h2 {
@@ -385,13 +381,128 @@ a, p, small {
     /*test parallax on mobile*/
 }
 
-.season-proof {
+.quattro {
     height: 100vh;
     background-image: url("../img/winter-audi-logo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
+
+.quattro-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quattro-text h2 {
+    margin-top: -20px;
+    color: #f4f4f4;
+    font-size: 95px;
+    font-weight: 300;
+    text-align: center;
+    text-shadow: 2px 2px 2px #0e0e0e;
+}
+
+.quattro-text h3 {
+    margin-top: -10px;
+    color: #0e0e0e;
+    font-size: 25px;
+    text-align: center;
+}
+
+.quattro-text p {
+    font-size: 18px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-align: center;
+    margin: 0 30px;
+}
+
+
+.snow-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* snow animation */
+
+.snowflake {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-size: cover;
+    animation: animate-snow 20s infinite linear;
+}
+
+@keyframes animate-snow {
+    0%{
+        opacity: 0.9;
+        transform: translate(0, 0) rotateZ(0deg);
+    }
+
+    95%{
+        opacity: 0.9;
+    }
+
+
+    100%{
+        opacity: 0;
+        transform: translate(20px, 95vh) rotateZ(360deg);
+    }
+}
+
+.snowflake:nth-child(5n+1) {
+    background-image: url("../img/snowflake1.png");
+}
+
+
+.snowflake:nth-child(5n+2) {
+    background-image: url("../img/snowflake2.png");
+    animation-delay: -4s;
+}
+
+.snowflake:nth-child(5n+3) {
+    background-image: url("../img/snowflake3.png");
+    animation-delay: -6s;
+}
+
+.snowflake:nth-child(5n+4) {
+    background-image: url("../img/snowflake4.png");
+    animation-delay: -8s;
+}
+
+.snowflake:nth-child(5n) {
+    background-image: url("../img/snowflake5.png");
+    animation-delay: -14s;
+}
+
+
+.snowflake:nth-child(6n+2) {
+    animation-delay: -4s;
+}
+
+.snowflake:nth-child(6n+3) {
+    animation-delay: -6s;
+}
+
+.snowflake:nth-child(6n+4) {
+    animation-delay: -8s;
+}
+
+.snowflake:nth-child(6n) {
+    animation-delay: -14s;
+}
+
+
 
 .tbd {
     height: 100vh;
@@ -410,11 +521,22 @@ a, p, small {
 
 
 
+@media screen and (max-width: 1170px) {
 
 
+    .masthead-title h1 {
+        font-size: 100px;
+    }
+
+    .masthead-image {
+        background-position: center;
+        background-size: contain;
+        background-position-y: 0%;
+        /* height set via JS */
+    }
 
 
-
+}
 
 
 
@@ -455,23 +577,6 @@ a, p, small {
         margin-left: 90px;
     }
 
-    .masthead {
-        height: 100vh;
-    }
-
-    .masthead-title h1 {
-        font-size: 100px;
-    }
-
-    .masthead-image {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        background-position-x: -15px;
-        height: 50%;
-        background-size: 105%;
-    }
 
 
 }

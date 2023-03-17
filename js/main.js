@@ -1,30 +1,16 @@
 document.addEventListener('DOMContentLoaded',(loaded) => {
 
     /* --------------------------------------- */
-    /*   Masthead BG - flicker car lights on   */
+    /*     Masthead BG - fade car lights on    */
     /* --------------------------------------- */
 
     var mastheadBG = document.querySelector(".masthead-image");
-
-    function lightsON() {
-        mastheadBG.classList.add("lights-on");
-    }
-
-    function lightsOFF() {
-        mastheadBG.classList.remove("lights-on");
-    }
 
     function lightsONfade() {
         mastheadBG.classList.add("lights-on-fade");
     }
 
-    window.setTimeout(lightsON, 300);
-    window.setTimeout(lightsOFF, 700);
-    window.setTimeout(lightsON, 900);
-    window.setTimeout(lightsOFF, 1300);
-    window.setTimeout(lightsON, 1350);
-    window.setTimeout(lightsOFF, 1600);
-    window.setTimeout(lightsONfade, 1800);
+    window.setTimeout(lightsONfade, 300);
 
     /* --------------------------------------- */
     /*         Set customized car image        */
@@ -237,5 +223,39 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     glRimsSq.addEventListener("click", function() {
         rimsChange("gl", "gold", glRimsSq, "20\" 5-V-spoke evo design, matte bronze wheels");
     });
+
+
+    /* --------------------------------------- */
+    /*       Adjust masthead height when       */
+    /*               vh <= 1170px              */
+    /* --------------------------------------- */
+
+    var mastheadBg = document.getElementById("home-masthead-img");
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    let mastheadWidth = 0;
+
+    function resizeMasthead() {
+
+        // get window width
+        width = window.innerWidth;
+
+        if (width <= 1170) {
+
+            // map current width to the range below:
+            // 320px W = 245px H, 1170px W = 770px H
+            height = window.innerHeight;
+            let newHeight = (770-245) * (width - 320) / (1170 - 320) + 245;
+            mastheadBg.style.height = newHeight +'px';
+
+        }
+        else {
+            mastheadBg.style.height = "100vh";
+        }
+
+    }
+
+    window.addEventListener('resize', resizeMasthead);
+    window.addEventListener('load', resizeMasthead);
 
 });
