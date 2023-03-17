@@ -406,7 +406,7 @@ a, p, small {
     font-size: 95px;
     font-weight: 300;
     text-align: center;
-    text-shadow: 2px 2px 2px #0e0e0e;
+    text-shadow: 0.5px 0.5px 0.5px #0e0e0e;
 }
 
 .quattro-text h3 {
@@ -436,8 +436,8 @@ a, p, small {
 /* snow animation */
 
 .snowflake {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     display: inline-block;
     background-size: cover;
     animation: animate-snow 20s infinite linear;
@@ -508,17 +508,46 @@ a, p, small {
     height: 100vh;
 }
 
-.test-drive {
-    background-color: #1d1d1d;
-
-}
 
 .video-bg {
     width: 100%;
     height: auto;
+    position: absolute;
+    z-index: -999;
 }
 
+.book-test-drive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.test-drive-btn {
+    color: #f4f4f4;
+    border: 1px solid #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 80px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    transition: 0.5s all ease;
+    text-decoration: none;
+}
+
+.test-drive-btn:hover {
+    background-color: #f4f4f4;
+    color: #0e0e0e;
+}
+
+.test-drive h2 {
+    color: #f4f4f4;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
 
 
 @media screen and (max-width: 1170px) {
