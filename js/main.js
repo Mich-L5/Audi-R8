@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     window.setTimeout(lightsONfade, 300);
 
     /* --------------------------------------- */
-    /*         Set customized car image        */
+    /*      Set customized car image & text    */
     /* --------------------------------------- */
     /* ------------------------- */
     /*    1. Get DOM elements    */
@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
 
     // get gradient bar element
     var bar = document.querySelector(".color-bar");
+
 
     // get button elements
     var allTrimBtns = document.querySelectorAll('.car-trim-btn');
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     // get text elements
     var bodyColorText = document.getElementById("color-choice");
     var rimsColorText = document.getElementById("wheel-choice");
+    var priceText = document.getElementById("price");
 
     /* ------------------------- */
     /*       2. Set vars         */
@@ -96,9 +98,20 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         btn.classList.add("selected-btn");
         btn.classList.remove("unselected-btn");
 
+
         trim = trimChange;
         carTrim = trimAlt;
         updateImg();
+
+        // update price
+        // spyder
+        if (btn.innerHTML == "<div>Spyder</div>") {
+            priceText.innerText = "Starting at $249,000"
+        }
+        // coupe
+        else {
+            priceText.innerText = "Starting at $237,000"
+        }
     }
 
 
