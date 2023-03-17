@@ -258,4 +258,23 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     window.addEventListener('resize', resizeMasthead);
     window.addEventListener('load', resizeMasthead);
 
+
+    /* --------------------------------------- */
+    /*         Display header on scroll        */
+    /* --------------------------------------- */
+
+    var header = document.getElementsByTagName('header');
+    function showHeader() {
+        if (window.scrollY > 120) {
+            header[0].classList.add("show-header");
+        }
+        else {
+            header[0].classList.remove("show-header");
+        }
+    }
+
+    window.addEventListener('scroll', showHeader);
+
+
+
 });
