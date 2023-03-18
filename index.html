@@ -13,10 +13,10 @@
     <!-- JS -->
     <script src="./js/main.js" defer></script>
     <script src="https://kit.fontawesome.com/36e897625c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-
+<header id="header-fade-in">
     <div>
         <a href="index.html"><img src="./img/logo.png" alt="Audi R8 logo"></a>
     </div>
@@ -37,12 +37,11 @@
             </ul>
         </nav>
     </div>
-
 </header>
-
-
 <main>
-<div class="wrapper"></div>
+    <!-- header wrapper -->
+    <div class="wrapper"></div>
+
     <!-- masthead -->
     <section class="masthead">
         <div class="masthead-image" id="home-masthead-img"></div>
@@ -51,7 +50,6 @@
             <h2>The All-New 2023 Audi R8</h2>
         </div>
     </section>
-
 
     <!-- customize -->
     <!-- sources (images, color names, and rims/wheel names):
@@ -88,21 +86,13 @@
         <a href="#" class="buy-btn"><div>Buy Today</div></a>
     </section>
 
-
-
     <!-- closeup audi logo -->
-    <section class="close-up-logo">
-
-    </section>
-
-
+    <section class="close-up-logo"></section>
 
     <!-- timeline -->
     <!-- source: https://www.autoevolution.com/audi/r8/ -->
     <section class="timeline">
-
         <h2>The Audi R8 Over the Years</h2>
-
         <div class="timeline-container">
             <span class="timeline-bar"></span>
             <!-- Model 1 -->
@@ -217,12 +207,8 @@
         </div>
     </section>
 
-
-
     <!-- closeup wheel -->
-    <section class="close-up-wheel">
-
-    </section>
+    <section class="close-up-wheel"></section>
 
     <!-- quattro -->
     <section class="quattro">
@@ -251,8 +237,6 @@
                 seasons.</p>
             <small>*Select 2023 Audi R8 models</small>
         </div>
-
-
     </section>
 
     <!-- specs -->
@@ -276,6 +260,7 @@
         </div>
     </section>
 
+    <!-- inventory -->
     <section class="inventory">
         <h2>Pre-Owned Inventory</h2>
        <h3>Buy with confidence with Audi Certified: <span class="plus">plus</span></h3>
@@ -288,10 +273,7 @@
             <a href="#" >Learn More</a>
             <a href="#" >Browse Pre-Owned Inventory</a>
         </div>
-
     </section>
-
-
 </main>
 <footer>
     <div class="address-container">
@@ -313,6 +295,5 @@
         <small>Copyright © 2023</small>
     </div>
 </footer>
-
 </body>
 </html>
