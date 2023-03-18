@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Audi R8 Homepage">
     <meta name="robots" content="noindex, nofollow">
-    <title>About</title>
+    <title>Contact</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css">
     <!-- remove custom browser styles -->
@@ -39,22 +39,34 @@
     </div>
 </header>
 
-<main class="about">
+<main class="contact">
     <!-- header wrapper -->
     <div class="wrapper"></div>
 
     <section>
         <div class="secondary-masthead">
-            <h1>ABOUT</h1>
+            <h1>CONTACT US</h1>
         </div>
     </section>
 
-    <section class="about-audi">
-        <h2>About the Audi R8</h2>
-        <p>The Audi R8 is a 2-seater supercar, originally introduced in 2006.
-            The mid-engine supercar features a 5.2L V-10 engine, and develops 562 hp and 406 lb-ft of torque (select models).
-        It is currently available as a coupe or a convertible (spyder), and available in Audi's
-        all-wheel drive system: quattro.</p>
+    <section class="contact-audi">
+        <h2>Questions or comments?</h2>
+        <p>Please use the contact form below to contact us</p>
+        <form id="contact-form-audi" class="contact-form" action="somephpfile.php" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <label for="name-input">Name: </label>
+                <input type="text" id="name-input">
+            </fieldset>
+            <fieldset>
+                <label for="email-input">Email: </label>
+                <input type="text" id="email-input">
+            </fieldset>
+            <fieldset>
+                <label for="message-input">Message: </label>
+                <textarea id="message-input"></textarea>
+            </fieldset>
+            <button form="contact-form-audi" value="Submit" type="submit">Submit</button>
+        </form>
     </section>
 
 </main>

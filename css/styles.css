@@ -782,27 +782,34 @@ footer i {
     background-position: center;
 }
 
-.about h1 {
+.about h1, .contact h1 {
    color: #f4f4f4;
     font-size: 150px;
 }
 
-.about-audi {
+.about-audi, .contact-audi {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 700px;
     border-top: #afafaf solid 15px;
-
 }
 
-.about-audi h2 {
+.contact-audi {
+    height: auto;
+}
+
+.about-audi h2, .contact-audi h2 {
     font-size: 50px;
     font-weight: 300;
 }
 
-.about-audi p {
+.contact-audi h2 {
+    margin-top: 100px;
+}
+
+.about-audi p, .contact-audi p {
     font-family: 'Chakra Petch', sans-serif;
     font-size: 25px;
     margin: 0 auto;
@@ -813,8 +820,54 @@ footer i {
 
 }
 
+.contact-form fieldset {
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    margin: 3px 0;
+}
 
+.contact-form label {
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 22px;
+    width: 80px;
+}
 
+.contact-form {
+    margin: 50px 30px 130px 30px;
+    background-color: #ececec;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form textarea, .contact-form input {
+    width: 250px;
+    border: 0.5px solid #0e0e0e;
+
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.contact-form button {
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
+    border-radius: 0;
+    border: 0.5px solid #0e0e0e;
+    width: 100px;
+    cursor: pointer;
+    transition: 0.5s ease all;
+    background-color: #d7d7d7;
+}
+
+.contact-form button:hover {
+    background-color: #cccccc;
+}
 
 
 
