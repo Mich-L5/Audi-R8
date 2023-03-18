@@ -106,11 +106,11 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         // update price
         // spyder
         if (btn.innerHTML == "<div>Spyder</div>") {
-            priceText.innerText = "Starting at $249,000"
+            priceText.innerText = "Starting at $171,000"
         }
         // coupe
         else {
-            priceText.innerText = "Starting at $237,000"
+            priceText.innerText = "Starting at $158,600"
         }
     }
 
@@ -289,5 +289,67 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     window.addEventListener('scroll', showHeader);
 
 
+
+    /* --------------------------------------- */
+    /*              Hamburger menu             */
+    /* --------------------------------------- */
+
+    // get burger element
+    var hamburger = document.querySelector(".hamburger");
+    // get menu element
+    var menu = document.querySelector("nav ul");
+    // get menu bg element
+    var menuBG = document.querySelector("header div:nth-child(3)");
+
+    // variable to toggle menu on/off
+    var toggle = 0;
+
+    // open/close hamburger menu
+    function toggleMenu() {
+        // if menu is closed, open it, add menu bg, and darken header
+        if (toggle == 0) {
+            toggle = 1;
+            menu.classList.add("open-menu");
+            menuBG.classList.add("add-menu-bg");
+            header[0].classList.add("darken-header");
+        }
+        // if menu is opened, close it, remove menu bg, and remove darkened header class
+        else {
+            toggle = 0;
+            menu.classList.remove("open-menu");
+            menuBG.classList.remove("add-menu-bg");
+            header[0].classList.remove("darken-header");
+        }
+
+    }
+
+    // add click event listener to hamburger
+    hamburger.addEventListener('click', toggleMenu);
+
+    // add click event listener to menu bg
+    menuBG.addEventListener('click', function() {
+        // if menu is open and menu bg is clicked on, close the menu
+        if (toggle == 1) {
+            menu.classList.remove("open-menu");
+            menuBG.classList.remove("add-menu-bg");
+            header[0].classList.remove("darken-header");
+        }
+    })
+
+    // remove the transition effect on header when menu resizes from desktop to mobile
+    function removeMenuTransition() {
+        // if window is in the menu transition width (range is extended because if it's too close to the breakpoint (i.e. 767-769), we can still see the menu transitioning
+        if (width >= 700 && width <= 800) {
+            // remove the transition property (so that we can't see the menu transition from desktop to mobile position)
+           menu.style.transition = 'none';
+
+           // add the transition property back right after
+            function addMenuTransition() {
+                menu.style.transition = '0.5s all ease';
+            }
+            setTimeout(addMenuTransition, 500);
+        }
+    }
+    window.addEventListener('resize', removeMenuTransition);
 
 });
