@@ -298,27 +298,29 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     var hamburger = document.querySelector(".hamburger");
     // get menu element
     var menu = document.querySelector("nav ul");
-    // get menu bg element
-    var menuBG = document.querySelector("header div:nth-child(3)");
+    // get wrapper element
+    var wrapper = document.querySelector(".wrapper");
 
     // variable to toggle menu on/off
     var toggle = 0;
 
     // open/close hamburger menu
     function toggleMenu() {
-        // if menu is closed, open it, add menu bg, and darken header
+        // if menu is closed, open it, add menu wrapper, and darken header
         if (toggle == 0) {
             toggle = 1;
             menu.classList.add("open-menu");
-            menuBG.classList.add("add-menu-bg");
             header[0].classList.add("darken-header");
+            wrapper.classList.add("wrapper-active");
+
         }
-        // if menu is opened, close it, remove menu bg, and remove darkened header class
+        // if menu is opened, close it, remove menu wrapper, and remove darkened header class
         else {
             toggle = 0;
             menu.classList.remove("open-menu");
-            menuBG.classList.remove("add-menu-bg");
             header[0].classList.remove("darken-header");
+            wrapper.classList.remove("wrapper-active");
+
         }
 
     }
