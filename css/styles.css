@@ -639,17 +639,74 @@ header ul li {
 }
 
 .inventory {
-    height: 700px;
+    height: 800px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .inventory h2 {
-    font-size: 45px;
+    font-size: 55px;
     font-weight: 300;
-    margin-top: 100px;
+    margin-top: -100px;
+}
+
+.inventory h3 {
+    font-size: 30px;
+}
+
+.plus {
+    font-style: italic;
+}
+
+.inventory p {
+    margin: 0 30px;
+    font-size: 20px;
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 60px auto 70px auto;
+    max-width: 900px;
 }
 
 
+.inventory-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.inventory-btn-container a {
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    width: 300px;
+    text-align: center;
+    padding: 11px;
+    color: #0e0e0e;
+    transition: 0.5s ease all;
+    border: solid 1px #0e0e0e;
+    text-decoration: none;
+    margin: 0 10px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.inventory-btn-container a:nth-child(2) {
+    font-size: 20px;
+    background-color: #efefef;
+}
+
+.inventory-btn-container a:hover {
+    background-color: #efefef;
+}
+
+.inventory-btn-container a:nth-child(2):hover {
+    font-size: 20px;
+    background-color: #d2d2d2;
+}
 
 
 footer {
