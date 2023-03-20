@@ -681,12 +681,12 @@ header ul li {
 }
 
 
-.inventory-btn-container {
+.inventory-btn-container, .product-btn-container {
     display: flex;
     justify-content: center;
 }
 
-.inventory-btn-container a {
+.inventory-btn-container a, .product-btn-container a {
     font-family: 'Alumni Sans', sans-serif;
     font-size: 30px;
     letter-spacing: 3px;
@@ -705,18 +705,24 @@ header ul li {
 
 }
 
-.inventory-btn-container a:nth-child(2) {
+.inventory-btn-container a:nth-child(2), .product-btn-container a:nth-child(2) {
     font-size: 20px;
     background-color: #efefef;
 }
 
-.inventory-btn-container a:hover {
+.inventory-btn-container a:hover, .product-btn-container a:hover {
     background-color: #efefef;
 }
 
-.inventory-btn-container a:nth-child(2):hover {
+.inventory-btn-container a:nth-child(2):hover, .product-btn-container a:nth-child(2):hover {
     font-size: 20px;
     background-color: #d2d2d2;
+}
+
+.product-btn-container {
+    margin-bottom: 150px;
+    margin-top: 40px;
+
 }
 
 
@@ -912,6 +918,17 @@ footer i {
     font-size: 40px;
     width: 250px;
 }
+
+.product-img-block{
+    height: 100vh;
+    background-image: url("../img/audi-r8-back-view.jpg");
+    background-size: cover;
+    background-position-y: 60%;
+    background-repeat: no-repeat;
+
+
+}
+
 
 .configurations {
     display: flex;
