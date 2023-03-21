@@ -1,9 +1,14 @@
 document.addEventListener('DOMContentLoaded',(loaded) => {
 
+    // get part of the path name to later check if we are on the home page
+    var pathCheck = window.location.pathname.slice(-8)
+
     /* --------------------------------------- */
     /*     Masthead BG - fade car lights on    */
     /* --------------------------------------- */
-    if (document.URL.includes("index.html")) {
+
+    // check if we are on index.html or homepage (without extension)
+    if (document.URL.includes("index.html") || pathCheck.includes("audi-r8")) {
 
         var mastheadBG = document.querySelector(".masthead-image");
 
@@ -18,7 +23,8 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     /*      Set customized car image & text    */
     /* --------------------------------------- */
 
-    if (document.URL.includes("index.html") || document.URL.includes("product.html")) {
+    // check if we are on index.html, product.html or homepage (without extension)
+    if (document.URL.includes("index.html") || document.URL.includes("product.html") || pathCheck.includes("audi-r8")) {
 
         /* ------------------------- */
         /*    1. Get DOM elements    */
@@ -250,11 +256,11 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     /* --------------------------------------- */
     var width = window.innerWidth;
 
-    if (document.URL.includes("index.html")) {
+    // check if we are on index.html or homepage (without extension)
+    if (document.URL.includes("index.html") || pathCheck.includes("audi-r8")) {
 
         var mastheadBg = document.getElementById("home-masthead-img");
         let height = window.innerHeight;
-        let mastheadWidth = 0;
 
         function resizeMasthead() {
 
@@ -275,15 +281,20 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
 
         }
 
+        // invoke resizeMasthead on load and whenever window is resized
+        resizeMasthead();
         window.addEventListener('resize', resizeMasthead);
-        window.addEventListener('load', resizeMasthead);
+
+
+
     }
 
     /* --------------------------------------- */
     /*         Display header on scroll        */
     /* --------------------------------------- */
 
-    if (document.URL.includes("index.html")) {
+    // check if we are on index.html or homepage (without extension)
+    if (document.URL.includes("index.html") || pathCheck.includes("audi-r8")) {
 
         var header = document.getElementById("header-fade-in");
 
@@ -367,5 +378,143 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         }
     }
     window.addEventListener('resize', removeMenuTransition);
+
+    /* --------------------------------------- */
+    /*    Car configuration drop down menu     */
+    /* --------------------------------------- */
+
+    if (document.URL.includes("product.html")) {
+
+        // get the selected configuration name
+        var configSelected = document.getElementById("config-selected");
+
+        // get the dropdown menu and its value
+        var configMenu = document.getElementById("config-menu");
+        var configMenuValue = document.getElementById("config-menu").value;
+
+        // get the table value elements
+        var configPrice = document.querySelectorAll(".config-price");
+        var configEngine = document.querySelectorAll(".config-engine");
+        var configTransmission = document.querySelectorAll(".config-transmission");
+        var configDrivetrain = document.querySelectorAll(".config-drivetrain");
+        var configFuel = document.querySelectorAll(".config-fuel");
+        var configHP = document.querySelectorAll(".config-hp");
+        var configTorque = document.querySelectorAll(".config-torque");
+
+
+        // function to update the configuration table based on which value is selected from dropdown menu
+        function updateConfigTable() {
+            configMenuValue = document.getElementById("config-menu").value;
+
+            // switch statement to display table values based on option selected
+            switch(configMenuValue) {
+                case "1":
+                    configPrice[0].textContent = "$158,600";
+                    configPrice[1].textContent = "$158,600";
+                    configEngine[0].textContent = "5.2L V10 Gas";
+                    configEngine[1].textContent = "5.2L V10 Gas";
+                    configTransmission[0].textContent = "7-Speed Automatic";
+                    configTransmission[1].textContent = "7-Speed Automatic";
+                    configDrivetrain[0].textContent = "Rear-Wheel Drive";
+                    configDrivetrain[1].textContent = "Rear-Wheel Drive";
+                    configFuel[0].innerHTML = "City: 14 MPG\n" +
+                        "                    <span>Hwy: 23 MPG</span>";
+                    configFuel[1].innerHTML = "City: 14 MPG\n" +
+                        "                    <span>Hwy: 23 MPG</span>";
+                    configHP[0].textContent = "562 hp @ 4475 rpm";
+                    configHP[1].textContent = "562 hp @ 4475 rpm";
+                    configTorque[0].textContent = "406 lb-ft @ 6300 rpm";
+                    configTorque[1].textContent = "406 lb-ft @ 6300 rpm";
+                    configSelected.textContent = "Coupe V10 performance RWD";
+                    break;
+
+                case "2":
+                    configPrice[0].textContent = "$209,700";
+                    configPrice[1].textContent = "$209,700";
+                    configEngine[0].textContent = "5.2L V10 Gas";
+                    configEngine[1].textContent = "5.2L V10 Gas";
+                    configTransmission[0].textContent = "7-Speed Automatic";
+                    configTransmission[1].textContent = "7-Speed Automatic";
+                    configDrivetrain[0].textContent = "All-Wheel Drive";
+                    configDrivetrain[1].textContent = "All-Wheel Drive";
+                    configFuel[0].innerHTML = "City: 13 MPG\n" +
+                        "                    <span>Hwy: 18 MPG</span>";
+                    configFuel[1].innerHTML = "City: 13 MPG\n" +
+                        "                    <span>Hwy: 18 MPG</span>";
+                    configHP[0].textContent = "602 hp @ 8100 rpm";
+                    configHP[1].textContent = "602 hp @ 8100 rpm";
+                    configTorque[0].textContent = "413 lb-ft @ 6700 rpm";
+                    configTorque[1].textContent = "413 lb-ft @ 6700 rpm";
+                    configSelected.textContent = "Coupe V10 performance quattro";
+                    break;
+
+                case "3":
+                    configPrice[0].textContent = "$249,900";
+                    configPrice[1].textContent = "$249,900";
+                    configEngine[0].textContent = "5.2L V10 Gas";
+                    configEngine[1].textContent = "5.2L V10 Gas";
+                    configTransmission[0].textContent = "7-Speed Automatic";
+                    configTransmission[1].textContent = "7-Speed Automatic";
+                    configDrivetrain[0].textContent = "Rear-Wheel Drive";
+                    configDrivetrain[1].textContent = "Rear-Wheel Drive";
+                    configFuel[0].innerHTML = "City: 14 MPG\n" +
+                        "                    <span>Hwy: 21 MPG</span>";
+                    configFuel[1].innerHTML = "City: 14 MPG\n" +
+                        "                    <span>Hwy: 21 MPG</span>";
+                    configHP[0].textContent = "602 hp @ 8100 rpm";
+                    configHP[1].textContent = "602 hp @ 8100 rpm";
+                    configTorque[0].textContent = "413 lb-ft @ 6700 rpm";
+                    configTorque[1].textContent = "413 lb-ft @ 6700 rpm";
+                    configSelected.textContent = "Coupe GT RWD";
+                    break;
+
+                case "4":
+                    configPrice[0].textContent = "$171,000";
+                    configPrice[1].textContent = "$171,000";
+                    configEngine[0].textContent = "5.2L V10 Gas";
+                    configEngine[1].textContent = "5.2L V10 Gas";
+                    configTransmission[0].textContent = "7-Speed Automatic";
+                    configTransmission[1].textContent = "7-Speed Automatic";
+                    configDrivetrain[0].textContent = "Rear-Wheel Drive";
+                    configDrivetrain[1].textContent = "Rear-Wheel Drive";
+                    configFuel[0].innerHTML = "City: 14 MPG\n" +
+                        "                    <span>Hwy: 23 MPG</span>";
+                    configFuel[1].innerHTML = "City: 14 MPG\n" +
+                        "                    <span>Hwy: 23 MPG</span>";
+                    configHP[0].textContent = "562 hp @ 4475 rpm";
+                    configHP[1].textContent = "562 hp @ 4475 rpm";
+                    configTorque[0].textContent = "406 lb-ft @ 6300 rpm";
+                    configTorque[1].textContent = "406 lb-ft @ 6300 rpm";
+                    configSelected.textContent = "Spyder V10 performance RWD";
+                    break;
+
+                case "5":
+                    configPrice[0].textContent = "$222,100";
+                    configPrice[1].textContent = "$222,100";
+                    configEngine[0].textContent = "5.2L V10 Gas";
+                    configEngine[1].textContent = "5.2L V10 Gas";
+                    configTransmission[0].textContent = "7-Speed Automatic";
+                    configTransmission[1].textContent = "7-Speed Automatic";
+                    configDrivetrain[0].textContent = "All-Wheel Drive";
+                    configDrivetrain[1].textContent = "All-Wheel Drive";
+                    configFuel[0].innerHTML = "City: 13 MPG\n" +
+                        "                    <span>Hwy: 18 MPG</span>";
+                    configFuel[1].innerHTML = "City: 13 MPG\n" +
+                        "                    <span>Hwy: 18 MPG</span>";
+                    configHP[0].textContent = "602 hp @ 8100 rpm";
+                    configHP[1].textContent = "602 hp @ 8100 rpm";
+                    configTorque[0].textContent = "413 lb-ft @ 6700 rpm";
+                    configTorque[1].textContent = "413 lb-ft @ 6700 rpm";
+                    configSelected.textContent = "Spyder V10 performance quattro";
+                    break;
+            }
+
+        }
+
+        // event listener that listens for a change in the menu
+        configMenu.addEventListener('change', updateConfigTable);
+
+    }
+
 
 });

@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Audi R8 Homepage">
+    <meta name="description" content="Audi R8 Product Page">
     <meta name="robots" content="noindex, nofollow">
     <title>The 2023 Audi R8</title>
+    <link rel="icon" type="image/x-icon" href="./img/r8-black-logo.png">
     <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css">
     <!-- remove custom browser styles -->
@@ -79,51 +80,51 @@
             <img src="./img/gold-wheel.png" alt="car wheel with gold rims">
         </div>
         <small id="wheel-choice">20" milled cut design, anthracite black wheels</small>
-        <a href="#" class="buy-btn"><div>Buy Today</div></a>
+        <a href="https://www.audi.ca/ca/web/en/models/r8.html" target="_blank" class="buy-btn"><div>Buy Today</div></a>
     </section>
 
     <section class="product-img-block"></section>
 
     <section class="configurations">
         <h2>Configurations</h2>
-        <select>
-            <option>Coupe V10 performance RWD</option>
-            <option>Coupe V10 performance quattro</option>
-            <option>Coupe GT RWD</option>
-            <option>Spyder V10 performance RWD</option>
-            <option>Spyder V10 performance quattro</option>
+        <select id="config-menu">
+            <option value="1">Coupe V10 performance RWD</option>
+            <option value="2">Coupe V10 performance quattro</option>
+            <option value="3">Coupe GT RWD</option>
+            <option value="4">Spyder V10 performance RWD</option>
+            <option value="5">Spyder V10 performance quattro</option>
         </select>
-        <p>Coupe V10 performance RWD</p>
+        <p id="config-selected">Coupe V10 performance RWD</p>
         <!-- Source https://carbuzz.com/compare/audi-r8-coupe-vs-audi-r8-spyder -->
         <table class="mobile-table">
             <tr>
                 <td>Starting Price</td>
-                <td>$158,600</td>
+                <td class="config-price">$158,600</td>
             </tr>
             <tr>
                 <td>Engine</td>
-                <td>5.2L V10 Gas</td>
+                <td class="config-engine">5.2L V10 Gas</td>
             </tr>
             <tr>
                 <td>Transmission</td>
-                <td>7-Speed Automatic</td>
+                <td class="config-transmission">7-Speed Automatic</td>
             </tr>
             <tr>
                 <td>Drivetrain</td>
-                <td>Rear-Wheel Drive</td>
+                <td class="config-drivetrain">Rear-Wheel Drive</td>
             </tr>
             <tr>
                 <td>Fuel Economy</td>
-                <td>City: 14 MPG
+                <td class="config-fuel">City: 14 MPG
                     <span>Hwy: 23 MPG</span></td>
             </tr>
             <tr>
                 <td>Horsepower</td>
-                <td>562 hp @ 4475 rpm</td>
+                <td class="config-hp">562 hp @ 4475 rpm</td>
             </tr>
             <tr>
                 <td>Torque</td>
-                <td>406 lb-ft @ 6300 rpm</td>
+                <td class="config-torque">406 lb-ft @ 6300 rpm</td>
             </tr>
         </table>
         <table class="desktop-table">
@@ -137,19 +138,19 @@
                 <td>Torque</td>
             </tr>
             <tr>
-                <td>$158,600</td>
-                <td>5.2L V10 Gas</td>
-                <td>7-Speed Automatic</td>
-                <td>Rear-Wheel Drive</td>
-                <td>City: 14 MPG
+                <td class="config-price">$158,600</td>
+                <td class="config-engine">5.2L V10 Gas</td>
+                <td class="config-transmission">7-Speed Automatic</td>
+                <td class="config-drivetrain">Rear-Wheel Drive</td>
+                <td class="config-fuel">City: 14 MPG
                     <span>Hwy: 23 MPG</span></td>
-                <td>562 hp @ 4475 rpm</td>
-                <td>406 lb-ft @ 6300 rpm</td>
+                <td class="config-hp">562 hp @ 4475 rpm</td>
+                <td class="config-torque">406 lb-ft @ 6300 rpm</td>
             </tr>
         </table>
         <div class="product-btn-container">
-            <a href="#" >Buy Today</a>
-            <a href="#" >Book a Test Drive</a>
+            <a href="https://www.audi.ca/ca/web/en/models/r8.html" target="_blank" >Buy Today</a>
+            <a href="https://www.audidowntowntoronto.com/audi-concierge.htm" target="_blank" >Book a Test Drive</a>
         </div>
     </section>
 
