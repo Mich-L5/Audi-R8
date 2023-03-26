@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         function trimChange(trimChange, trimAlt, btn) {
 
             // deselected all buttons (style wise)
-            for (i = 0; i < allTrimBtns.length; i++) {
+            for (let i = 0; i < allTrimBtns.length; i++) {
                 allTrimBtns[i].classList.remove("selected-btn");
                 allTrimBtns[i].classList.add("unselected-btn");
             }
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         function bodyColorChange(bodyChange, bodyAlt, sq, colorText) {
 
             // deselected all squares (style wise)
-            for (i = 0; i < allColorSq.length; i++) {
+            for (let i = 0; i < allColorSq.length; i++) {
                 allColorSq[i].classList.remove("selected");
             }
 
