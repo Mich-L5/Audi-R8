@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         // get gradient bar element
         var bar = document.querySelector(".color-bar");
 
-
         // get button elements
         var allTrimBtns = document.querySelectorAll('.car-trim-btn');
         var coupeBtn = document.querySelectorAll('.car-trim-btn')[0];
@@ -81,7 +80,6 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         var carColor = "black";
         var rimsColor = "black";
 
-
         /* ------------------------- */
         /*    3. Helper functions    */
         /* ------------------------- */
@@ -109,7 +107,6 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
             btn.classList.add("selected-btn");
             btn.classList.remove("unselected-btn");
 
-
             trim = trimChange;
             carTrim = trimAlt;
             updateImg();
@@ -124,7 +121,6 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
                 priceText.innerText = "Starting at $158,600"
             }
         }
-
 
         // CAR BODY COLOR
         // function to update customized car image when body color change occurs
@@ -181,7 +177,6 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         /*           functions       */
         /* ------------------------- */
 
-
         // CAR TRIM
         // update custom image when button is clicked
         // coupe btn
@@ -236,7 +231,6 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
             bodyColorChange("rd-", "red", rdSq, "Tango Red Metallic");
         });
 
-
         // CAR WHEELS/RIMS
         // update custom image when square is clicked
         // black rims square
@@ -278,15 +272,11 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
             } else {
                 mastheadBg.style.height = "100vh";
             }
-
         }
 
         // invoke resizeMasthead on load and whenever window is resized
         resizeMasthead();
         window.addEventListener('resize', resizeMasthead);
-
-
-
     }
 
     /* --------------------------------------- */
@@ -305,9 +295,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
                 header.classList.remove("show-header");
             }
         }
-
         window.addEventListener('scroll', showHeader);
-
     }
 
     else {
@@ -336,17 +324,15 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
             menu.classList.add("open-menu");
             header.classList.add("darken-header");
             wrapper.classList.add("wrapper-active");
-
         }
+
         // if menu is opened, close it, remove menu wrapper, and remove darkened header class
         else {
             toggle = 0;
             menu.classList.remove("open-menu");
             header.classList.remove("darken-header");
             wrapper.classList.remove("wrapper-active");
-
         }
-
     }
 
     // add click event listener to hamburger
@@ -361,7 +347,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
             header.classList.remove("darken-header");
             wrapper.classList.remove("wrapper-active");
         }
-    })
+    });
 
     // remove the transition effect on header when menu resizes from desktop to mobile
     function removeMenuTransition() {
@@ -400,7 +386,6 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         var configFuel = document.querySelectorAll(".config-fuel");
         var configHP = document.querySelectorAll(".config-hp");
         var configTorque = document.querySelectorAll(".config-torque");
-
 
         // function to update the configuration table based on which value is selected from dropdown menu
         function updateConfigTable() {
@@ -508,13 +493,9 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
                     configSelected.textContent = "Spyder V10 performance quattro";
                     break;
             }
-
         }
 
         // event listener that listens for a change in the menu
         configMenu.addEventListener('change', updateConfigTable);
-
     }
-
-
 });
