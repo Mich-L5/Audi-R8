@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded',(loaded) => {
 
     // get part of the path name to later check if we are on the home page
-    var pathCheck = window.location.pathname.slice(-8)
+    // **specific to Netlify's URL**
+    var pathCheck = window.location.href.slice(-20);
+    // (old pathCheck variable for local testing)
+    //var pathCheck = window.location.pathname.slice(-8);
 
     /* --------------------------------------- */
     /*     Masthead BG - fade car lights on    */
@@ -498,4 +501,5 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         // event listener that listens for a change in the menu
         configMenu.addEventListener('change', updateConfigTable);
     }
+
 });
