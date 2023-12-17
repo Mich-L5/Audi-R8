@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     /* --------------------------------------- */
 
     // check if we are on index.html, product.html or homepage (without extension)
-    if (document.URL.includes("index.html") || document.URL.includes("product.html") || pathCheck.includes("audi-r8")) {
+    if (document.URL.includes("index") || document.URL.includes("product") || pathCheck.includes("audi-r8")) {
 
         /* ------------------------- */
         /*    1. Get DOM elements    */
@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     /*    Car configuration drop down menu     */
     /* --------------------------------------- */
 
-    if (document.URL.includes("product.html")) {
+    if (document.URL.includes("product")) {
 
         // get the selected configuration name
         var configSelected = document.getElementById("config-selected");
