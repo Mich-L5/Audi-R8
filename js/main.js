@@ -15,7 +15,31 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         // Whenever the user scrolls
         window.addEventListener("scroll", function() {
 
+            if (window.innerWidth > 768) {
+                turnOnHeadlights(220);
+            }
+            else if (window.innerWidth > 480) {
+                turnOnHeadlights(155);
+            }
+            else {
+                turnOnHeadlights(100);
+            }
+
+            function turnOnHeadlights(scrollDistance) {
+                // If the user is scrolling between 0-220px on the y axis
+                scrollPercent = (window.scrollY)/scrollDistance;
+
+                if (scrollPercent <= scrollDistance) {
+
+                    // Gradually fade in the second background image
+                    mastheadBG.style.backgroundImage = "url('./img/r8-front-view-lights-on.jpg')";
+                    mastheadBG.style.opacity = scrollPercent;
+                }
+            }
+
+
             // If the user is scrolling between 0-220px on the y axis
+            /*
             scrollPercent = (window.scrollY)/220;
 
             if (scrollPercent <= 220) {
@@ -23,7 +47,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
                 // Gradually fade in the second background image
                 mastheadBG.style.backgroundImage = "url('./img/r8-front-view-lights-on.jpg')";
                 mastheadBG.style.opacity = scrollPercent;
-            }
+            }*/
         });
     }
 
@@ -314,13 +338,31 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         var header = document.getElementById("header-fade-in");
 
         function showHeader() {
-            if (window.scrollY > 250) {
+
+            let scrollDistance;
+
+            // Desktop
+            if (window.innerWidth > 768) {
+                scrollDistance = 550;
+            }
+            // Tablet
+            else if (window.innerWidth > 480) {
+                scrollDistance = 350;
+            }
+            // Mobile
+            else {
+                scrollDistance = 200;
+            }
+
+            if (window.scrollY > scrollDistance) {
                 header.classList.add("show-header");
             } else {
                 header.classList.remove("show-header");
             }
         }
-        window.addEventListener('scroll', showHeader);
+
+        window.addEventListener("scroll", showHeader);
+
     }
 
     else {
