@@ -26,7 +26,12 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
             }
 
             function turnOnHeadlights(scrollDistance) {
-                // If the user is scrolling between 0-220px on the y axis
+                // Set bg elements to the same height
+                let bgHeight = document.getElementById("home-masthead-img").offsetHeight;
+                document.getElementById("home-masthead-overlay-img").style.height = bgHeight + "px";
+
+
+                // If the user is scrolling between 0px-scroll distance on the y axis
                 scrollPercent = (window.scrollY)/scrollDistance;
 
                 if (scrollPercent <= scrollDistance) {
@@ -37,17 +42,6 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
                 }
             }
 
-
-            // If the user is scrolling between 0-220px on the y axis
-            /*
-            scrollPercent = (window.scrollY)/220;
-
-            if (scrollPercent <= 220) {
-
-                // Gradually fade in the second background image
-                mastheadBG.style.backgroundImage = "url('./img/r8-front-view-lights-on.jpg')";
-                mastheadBG.style.opacity = scrollPercent;
-            }*/
         });
     }
 
@@ -228,6 +222,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
 
         allSquares.forEach(function(sq) {
             sq.addEventListener("click", function() {
+
 
 
             });
@@ -571,45 +566,48 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     /*             CUSTOM SCROLLBAR            */
     /* --------------------------------------- */
 
-    // scrollbar functionality
-    var docHeight = document.body.scrollHeight - window.innerHeight;
-    window.addEventListener("scroll", scrollbar);
-    window.addEventListener("resize", scrollbar);
+    if (window.innerWidth >= 1024) {
+        // scrollbar functionality
+        var docHeight = document.body.scrollHeight - window.innerHeight;
+        window.addEventListener("scroll", scrollbar);
+        window.addEventListener("resize", scrollbar);
 
-    function scrollbar() {
+        function scrollbar() {
 
-        docHeight = document.body.scrollHeight - window.innerHeight;
+            docHeight = document.body.scrollHeight - window.innerHeight;
 
-        // calculate the percentage of the window that is currently scrolled down
-        // using 96% instead of 100% so that the thumb icon does not go off screen
-        let percentage = ((window.scrollY/docHeight) * 96);
+            // calculate the percentage of the window that is currently scrolled down
+            // using 96% instead of 100% so that the thumb icon does not go off screen
+            let percentage = ((window.scrollY/docHeight) * 96);
 
-        // prevent icon from going all the way to the bottom
-        if (percentage > 96) {
-            percentage = 96
+            // prevent icon from going all the way to the bottom
+            if (percentage > 96) {
+                percentage = 96
+            }
+
+            document.getElementById("scrollbar-thumb").style.top = (percentage) + "%";
         }
 
-        document.getElementById("scrollbar-thumb").style.top = (percentage) + "%";
+        // scrollbar fade in/out on scroll
+        window.addEventListener("scroll", scrollbarFade);
+
+        let fadeOut;
+
+        function scrollbarFade() {
+
+            // clear previous timeout (if the user keeps on scrolling)
+            clearTimeout(fadeOut);
+
+            document.getElementById("thumb-container").style.opacity = 1;
+
+            // timeout to fade scrollbar back out
+            fadeOut = setTimeout(scrollbarFadeOut, 1000);
+        }
+
+        function scrollbarFadeOut() {
+            document.getElementById("thumb-container").style.opacity = 0;
+        }
     }
 
-    // scrollbar fade in/out on scroll
-    window.addEventListener("scroll", scrollbarFade);
-
-    let fadeOut;
-
-    function scrollbarFade() {
-
-        // clear previous timeout (if the user keeps on scrolling)
-        clearTimeout(fadeOut);
-
-        document.getElementById("thumb-container").style.opacity = 1;
-
-        // timeout to fade scrollbar back out
-        fadeOut = setTimeout(scrollbarFadeOut, 1000);
-    }
-
-    function scrollbarFadeOut() {
-        document.getElementById("thumb-container").style.opacity = 0;
-    }
 
 });
