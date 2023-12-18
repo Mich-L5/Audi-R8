@@ -33,7 +33,7 @@ html {
     width: 11px;
     height: auto;
     position: absolute;
-    right: 1px;
+    right: 2px;
     z-index: 1000;
     filter: drop-shadow(1px 1px 1px rgba(14, 14, 14, 0.42));
 }
