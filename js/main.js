@@ -9,35 +9,22 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
 
         var mastheadBG = document.getElementById("home-masthead-overlay-img");
 
-
         // Variable to calculate the second bg image opacity based on how far user has scrolled
-        let scrollPercent = (window.scrollY)/200;
+        let scrollPercent = 0;
 
         // Whenever the user scrolls
         window.addEventListener("scroll", function() {
 
-            // If the user is scrolling between 0-200px on the y axis
-            scrollPercent = (window.scrollY)/200;
+            // If the user is scrolling between 0-220px on the y axis
+            scrollPercent = (window.scrollY)/220;
 
-            if (scrollPercent <= 200 ) {
+            if (scrollPercent <= 220) {
 
                 // Gradually fade in the second background image
                 mastheadBG.style.backgroundImage = "url('./img/r8-front-view-lights-on.jpg')";
                 mastheadBG.style.opacity = scrollPercent;
-
             }
         });
-
-
-
-        /*
-        var mastheadBG = document.querySelector(".masthead-image");
-
-        function lightsONfade() {
-            mastheadBG.classList.add("lights-on-fade");
-        }
-
-        window.setTimeout(lightsONfade, 300);*/
     }
 
     /* --------------------------------------- */
