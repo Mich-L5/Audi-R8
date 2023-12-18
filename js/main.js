@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         var header = document.getElementById("header-fade-in");
 
         function showHeader() {
-            if (window.scrollY > 120) {
+            if (window.scrollY > 250) {
                 header.classList.add("show-header");
             } else {
                 header.classList.remove("show-header");
