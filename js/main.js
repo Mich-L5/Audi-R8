@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
 
             // Desktop
             if (window.innerWidth > 768) {
-                scrollDistance = 550;
+                scrollDistance = 500;
             }
             // Tablet
             else if (window.innerWidth > 480) {
