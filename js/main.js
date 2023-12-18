@@ -6,13 +6,38 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
 
     // check if we are on the home page
     if (document.getElementById("home-page")) {
+
+        var mastheadBG = document.getElementById("home-masthead-overlay-img");
+
+
+        // Variable to calculate the second bg image opacity based on how far user has scrolled
+        let scrollPercent = (window.scrollY)/200;
+
+        // Whenever the user scrolls
+        window.addEventListener("scroll", function() {
+
+            // If the user is scrolling between 0-200px on the y axis
+            scrollPercent = (window.scrollY)/200;
+
+            if (scrollPercent <= 200 ) {
+
+                // Gradually fade in the second background image
+                mastheadBG.style.backgroundImage = "url('./img/r8-front-view-lights-on.jpg')";
+                mastheadBG.style.opacity = scrollPercent;
+
+            }
+        });
+
+
+
+        /*
         var mastheadBG = document.querySelector(".masthead-image");
 
         function lightsONfade() {
             mastheadBG.classList.add("lights-on-fade");
         }
 
-        window.setTimeout(lightsONfade, 300);
+        window.setTimeout(lightsONfade, 300);*/
     }
 
     /* --------------------------------------- */
@@ -187,6 +212,22 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
 
         // CAR BODY COLOR
         // update custom image when square is clicked
+
+        let allSquares = [bkSq, chSq, slSq, whSq, nvSq, blSq, ywSq, rdSq];
+
+        allSquares.forEach(function(sq) {
+            sq.addEventListener("click", function() {
+
+
+            });
+        });
+
+
+
+
+
+
+
         // black square
         bkSq.addEventListener("click", function () {
             bodyColorChange("bk-", "black", bkSq, "Mythos Black Metallic");
@@ -247,6 +288,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
     var width = window.innerWidth;
 
     // check if we are on the home page
+
     if (document.getElementById("home-page"))
     {
         var mastheadBg = document.getElementById("home-masthead-img");
@@ -260,9 +302,9 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
             if (width <= 1170) {
 
                 // map current width to the range below:
-                // 320px W = 245px H, 1170px W = 770px H
+                // 320px W = 245px H, 1170px W = 780px H
                 height = window.innerHeight;
-                let newHeight = (770 - 245) * (width - 320) / (1170 - 320) + 245;
+                let newHeight = (780 - 245) * (width - 320) / (1170 - 320) + 245;
                 mastheadBg.style.height = newHeight + 'px';
 
             } else {

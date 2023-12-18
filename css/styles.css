@@ -113,14 +113,24 @@ header ul li {
     background-color: black;
 }
 
+#home-masthead-overlay-img {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+
+}
+
+/*
 .lights-on-fade {
     background-image: url("../img/r8-front-view-lights-on.jpg");
     transition: background-image 4s;
-}
+}*/
 
 .masthead-title {
     background-color: black;
     margin-top: -2px;
+    position: relative;
+    z-index: 999;
 }
 
 .masthead-title h1 {
