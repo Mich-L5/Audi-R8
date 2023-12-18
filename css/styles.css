@@ -18,6 +18,39 @@ a, p, small {
     font-family: 'Alumni Sans', sans-serif;
 }
 
+/*** CUSTOM SCROLLBAR ***/
+/* Firefox */
+html {
+    scrollbar-width: none;
+}
+
+/* all other browsers */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#scrollbar-thumb {
+    width: 11px;
+    height: auto;
+    position: absolute;
+    right: 1px;
+    z-index: 1000;
+    filter: drop-shadow(1px 1px 1px rgba(14, 14, 14, 0.42));
+}
+
+#thumb-container {
+    height: 100vh;
+    /*background-color: rgba(225, 225, 225, 0.25);*/
+    width: 17px;
+    position: fixed;
+    right: 0;
+    z-index: 999;
+    border-radius: 15px;
+    /*border: 0.5px solid #b9b9b9;*/
+    opacity: 0;
+    transition: .8s ease all;
+}
+
 header {
     position: fixed;
     z-index: 999;
