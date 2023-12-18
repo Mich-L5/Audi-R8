@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
                 turnOnHeadlights(220);
             }
             else if (window.innerWidth > 480) {
-                turnOnHeadlights(155);
+                turnOnHeadlights(120);
             }
             else {
                 turnOnHeadlights(100);
@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
             }
             // Mobile
             else {
-                scrollDistance = 200;
+                scrollDistance = 150;
             }
 
             if (window.scrollY > scrollDistance) {
