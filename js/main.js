@@ -12,9 +12,11 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         // Variable to calculate the second bg image opacity based on how far user has scrolled
         let scrollPercent = 0;
 
-        // Whenever the user scrolls
-        window.addEventListener("scroll", function() {
+        // Whenever the user scrolls or resizes the window, call adjustLightsBg
+        window.addEventListener("scroll", adjustLightsBg);
+        window.addEventListener("resize", adjustLightsBg);
 
+        function adjustLightsBg() {
             if (window.innerWidth > 768) {
                 turnOnHeadlights(220);
             }
@@ -41,8 +43,9 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
                     mastheadBG.style.opacity = scrollPercent;
                 }
             }
+        }
 
-        });
+
     }
 
     /* --------------------------------------- */
