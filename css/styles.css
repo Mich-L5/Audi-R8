@@ -687,6 +687,11 @@ header ul li {
     justify-content: center;
 }
 
+.inventory-btn-container a:nth-child(1), .product-btn-container a:nth-child(1) {
+    background-color: white;
+}
+
+
 .inventory-btn-container a:nth-child(2), .product-btn-container a:nth-child(2) {
     font-size: 20px;
     background-color: #efefef;
