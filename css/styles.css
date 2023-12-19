@@ -121,6 +121,11 @@ header ul li {
 .timeline {
     padding: 20px 30px 110px 30px;
     position: relative;
+    /* Source: https://getoutlines.com/blueprints/6614/2008-audi-r8-coupe-blueprints */
+    /* Source: https://drawingdatabase.com/audi-r8-v10-spyder-quattro-2019/ */
+    background-image: url("../img/audi-drawings.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .timeline-bar {
@@ -186,7 +191,7 @@ header ul li {
     right: 0;
     margin-right: -100px;
     padding: 5px;
-    background-color: white;
+    background-color: #f1efee;
     border: #0e0e0e dotted 2px;
 }
 
@@ -626,6 +631,10 @@ header ul li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("../img/audi-brand.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .inventory h2 {
