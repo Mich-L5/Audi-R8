@@ -912,6 +912,7 @@ footer i {
     background-size: cover;
     background-position-y: 60%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .configurations {
@@ -919,14 +920,19 @@ footer i {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* image source: https://dyler.com/blog/456/rear-wheel-drive-makes-a-comeback-to-audi-r8-lineup */
+    background-image: url("../img/audi-r8-interior.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .configurations h2 {
-    font-weight: 300;
+    font-weight: 400;
     margin-top: 110px;
     margin-bottom: 50px;
     letter-spacing: 7px;
     font-size: 40px;
+    color: white;
 }
 
 .configurations p {
@@ -935,6 +941,7 @@ footer i {
     margin-top: 70px;
     margin-bottom: 40px;
     letter-spacing: 1px;
+    color: white;
 }
 
 select {
@@ -976,6 +983,38 @@ table tr:nth-child(1) td {
 
 table {
     margin-bottom: 60px;
+}
+
+.engine {
+    height: 100vh;
+    /* image source: https://www.audi-mediacenter.com/en/photos/detail/audi-r8-v10-21605 */
+    background-image: url("../img/audi-r8-engine.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.engine h2, .engine h3 {
+    margin: 0;
+    font-weight: 200;
+    text-shadow:
+            -1px -1px 0 #fff, /* Top left */
+            1px -1px 0 #fff, /* Top right */
+            -1px  1px 0 #fff, /* Bottom left */
+            1px  1px 0 #fff; /* Bottom right */
+    text-align: center;
+    line-height: 35px;
+    max-width: 800px;
+}
+
+.engine h2 {
+    font-size: 50px;
+    margin-bottom: 65px;
 }
 
 /* MEDIA QUERIES */
