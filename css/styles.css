@@ -780,6 +780,13 @@ footer i {
     background-position: center;
 }
 
+.about, .contact {
+    background-image: url("../img/audi-spyder-and-coupe-faded.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
 .about h1, .contact h1 {
     color: #f4f4f4;
     font-size: 150px;
@@ -838,7 +845,7 @@ footer i {
 
 .contact-form {
     margin: 50px 30px 130px 30px;
-    background-color: #ececec;
+    background-color: #e1e1e1;
     padding: 50px 20px;
     display: flex;
     flex-direction: column;
@@ -864,7 +871,7 @@ footer i {
     width: 100px;
     cursor: pointer;
     transition: 0.5s ease all;
-    background-color: #d7d7d7;
+    background-color: #c9c7c7;
     letter-spacing: 1px;
     text-align: center;
     color: #0e0e0e;
@@ -875,7 +882,7 @@ footer i {
 }
 
 .contact-form button:hover {
-    background-color: #cccccc;
+    background-color: #e1e1e1;
 }
 
 .product-masthead {
@@ -986,9 +993,9 @@ table {
 }
 
 .engine {
-    height: 100vh;
+    height: 90vh;
     /* image source: https://www.audi-mediacenter.com/en/photos/detail/audi-r8-v10-21605 */
-    background-image: url("../img/audi-r8-engine.jpg");
+    background-image: url("../img/audi-r8-engine-faded.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -1008,13 +1015,24 @@ table {
             -1px  1px 0 #fff, /* Bottom left */
             1px  1px 0 #fff; /* Bottom right */
     text-align: center;
-    line-height: 35px;
     max-width: 800px;
 }
 
 .engine h2 {
     font-size: 50px;
     margin-bottom: 65px;
+}
+
+.engine h3 {
+    line-height: 35px;
+}
+
+.coupe-and-spyder-block {
+    /* source: https://www.audi-mediacenter.com/en/photos/detail/audi-r8-v10-rwd-coupe-audi-r8-v10-rwd-spyder-86612  */
+    background-image: url("../img/audi-coupe-and-spyder.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
 }
 
 /* MEDIA QUERIES */
@@ -1239,8 +1257,16 @@ table {
     }
 
     /* disable parallax on mobile */
-    .close-up-wheel, .close-up-logo {
+    .close-up-wheel, .close-up-logo, .engine, .product-img-block, .about, .contact {
         background-attachment: scroll;
+    }
+
+    .engine {
+        justify-content: space-between;
+        padding-top: 135px;
+        padding-bottom: 145px;
+        background-image: url("../img/audi-r8-engine-lg.jpg");
+        background-position-y: -60px;
     }
 
     .inventory-btn-container, .product-btn-container  {
@@ -1342,6 +1368,11 @@ table {
     .product-masthead h1 span {
         margin-bottom: 3px;
     }
+
+    .engine {
+        padding-top: 80px;
+        padding-bottom: 90px;
+    }
 }
 
 @media screen and (max-width: 630px) {
@@ -1422,6 +1453,12 @@ table {
     .specs-details small {
         margin-top: 50px;
         font-size: 16px;
+    }
+
+    .engine {
+        background-image: url("../img/audi-r8-engine.jpg");
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
 
@@ -1548,6 +1585,16 @@ table {
     .contact-form textarea, .contact-form input {
         width: 170px;
     }
+
+    .engine {
+        background-position-y: -75px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .engine {
+        background-position-y: -95px;
+    }
 }
 
 @media screen and (max-width: 360px) {
@@ -1614,6 +1661,13 @@ table {
 
     .timeline-element p {
         font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 330px) {
+    .engine {
+        background-position-y: -100px;
     }
 }
 
