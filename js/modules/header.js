@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded',(loaded) => {
+document.addEventListener("DOMContentLoaded",(loaded) => {
 
     /* --------------------------------------- */
     /*              HAMBURGER MENU             */
@@ -35,10 +35,10 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         }
 
         // add click event listener to hamburger
-        hamburger.addEventListener('click', toggleMenu);
+        hamburger.addEventListener("click", toggleMenu);
 
         // add click event listener to menu bg
-        wrapper.addEventListener('click', function () {
+        wrapper.addEventListener("click", function () {
             // if menu is open and menu bg is clicked on, close the menu
             if (toggle == 1) {
                 toggle = 0;
@@ -53,17 +53,17 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
             // if window is in the menu transition width (range is extended because if it's too close to the breakpoint (i.e. 767-769), we can still see the menu transitioning
             if (window.innerWidth >= 700 && window.innerWidth <= 800) {
                 // remove the transition property (so that we can't see the menu transition from desktop to mobile position)
-                menu.style.transition = 'none';
+                menu.style.transition = "none";
 
                 // add the transition property back right after
                 function addMenuTransition() {
-                    menu.style.transition = '0.5s all ease';
+                    menu.style.transition = "0.5s all ease";
                 }
 
                 setTimeout(addMenuTransition, 500);
             }
         }
-        window.addEventListener('resize', removeMenuTransition);
+        window.addEventListener("resize", removeMenuTransition);
     }
 
     /* --------------------------------------- */

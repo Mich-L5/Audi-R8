@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded',(loaded) => {
+document.addEventListener("DOMContentLoaded",(loaded) => {
 
     /* --------------------------------------- */
     /*     MASTHEAD BG - FADE CAR LIGHTS ON    */
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
                     // 320px W = 245px H, 1170px W = 780px H
                     height = window.innerHeight;
                     let newHeight = (780 - 245) * (width - 320) / (1170 - 320) + 245;
-                    mastheadBg.style.height = newHeight + 'px';
+                    mastheadBg.style.height = newHeight + "px";
 
                 } else {
                     mastheadBg.style.height = "100vh";
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
 
             // invoke resizeMasthead on load and whenever window is resized
             resizeMasthead();
-            window.addEventListener('resize', resizeMasthead);
+            window.addEventListener("resize", resizeMasthead);
         }
     }
 

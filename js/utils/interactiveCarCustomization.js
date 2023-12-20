@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded',(loaded) => {
+document.addEventListener("DOMContentLoaded",(loaded) => {
 
     /* --------------------------------------- */
     /*      SET CUSTOMIZED CAR IMAGE & TEXT    */
@@ -20,25 +20,25 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
             var bar = document.querySelector(".color-bar");
 
             // get button elements
-            var allTrimBtns = document.querySelectorAll('.car-trim-btn');
-            var coupeBtn = document.querySelectorAll('.car-trim-btn')[0];
-            var spyderBtn = document.querySelectorAll('.car-trim-btn')[1];
+            var allTrimBtns = document.querySelectorAll(".car-trim-btn");
+            var coupeBtn = document.querySelectorAll(".car-trim-btn")[0];
+            var spyderBtn = document.querySelectorAll(".car-trim-btn")[1];
 
             // get color square elements
-            var allColorSq = document.querySelectorAll('.color-option-container');
-            var bkSq = document.querySelectorAll('.color-option-container')[0];
-            var chSq = document.querySelectorAll('.color-option-container')[1];
-            var slSq = document.querySelectorAll('.color-option-container')[2];
-            var whSq = document.querySelectorAll('.color-option-container')[3];
-            var nvSq = document.querySelectorAll('.color-option-container')[4];
-            var blSq = document.querySelectorAll('.color-option-container')[5];
-            var ywSq = document.querySelectorAll('.color-option-container')[6];
-            var rdSq = document.querySelectorAll('.color-option-container')[7];
+            var allColorSq = document.querySelectorAll(".color-option-container");
+            var bkSq = document.querySelectorAll(".color-option-container")[0];
+            var chSq = document.querySelectorAll(".color-option-container")[1];
+            var slSq = document.querySelectorAll(".color-option-container")[2];
+            var whSq = document.querySelectorAll(".color-option-container")[3];
+            var nvSq = document.querySelectorAll(".color-option-container")[4];
+            var blSq = document.querySelectorAll(".color-option-container")[5];
+            var ywSq = document.querySelectorAll(".color-option-container")[6];
+            var rdSq = document.querySelectorAll(".color-option-container")[7];
 
             // get rims/wheels square elements
-            var allRimssq = document.querySelectorAll('.wheel-selector-container img');
-            var bkRimsSq = document.querySelectorAll('.wheel-selector-container img')[0];
-            var glRimsSq = document.querySelectorAll('.wheel-selector-container img')[1];
+            var allRimssq = document.querySelectorAll(".wheel-selector-container img");
+            var bkRimsSq = document.querySelectorAll(".wheel-selector-container img")[0];
+            var glRimsSq = document.querySelectorAll(".wheel-selector-container img")[1];
 
             // get text elements
             var bodyColorText = document.getElementById("color-choice");
@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
             // function to update image path and alt tag
             function updateImg() {
                 imgPath = "r8-" + trim + body + rims + ".jpg";
-                img.setAttribute('src', imgDir + imgPath);
-                img.setAttribute('alt', "a " + carColor + " " +
+                img.setAttribute("src", imgDir + imgPath);
+                img.setAttribute("alt", "a " + carColor + " " +
                     "Audi R8 " + carTrim + " with " + rimsColor + " rims ");
             }
 

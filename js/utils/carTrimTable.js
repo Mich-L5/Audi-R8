@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded',(loaded) => {
+document.addEventListener("DOMContentLoaded",(loaded) => {
 
     /* --------------------------------------- */
     /*    CAR CONFIGURATION DROP DOWN MENU     */
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
             }
 
             // event listener that listens for a change in the menu
-            configMenu.addEventListener('change', updateConfigTable);
+            configMenu.addEventListener("change", updateConfigTable);
         }
     }
 
