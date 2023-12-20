@@ -220,62 +220,36 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
 
         // CAR BODY COLOR
         // update custom image when square is clicked
+        // Create a CarColor class
+        class CarColor {
+            constructor(colorCode, colorName, fullColorName) {
+                this.colorCode = colorCode;
+                this.colorName = colorName;
+                this.fullColorName = fullColorName;
+            }
+        }
 
-        let allSquares = [bkSq, chSq, slSq, whSq, nvSq, blSq, ywSq, rdSq];
+        // Declare the CarColor objects
+        let bk = new CarColor("bk-", "black", "Mythos Black Metallic");
+        let ch = new CarColor("ch-", "charcoal", "Mythos Black Metallic");
+        let sl = new CarColor("sl-", "silver", "Mythos Black Metallic");
+        let wh = new CarColor("wh-", "white", "Mythos Black Metallic");
+        let nv = new CarColor("nv-", "navy", "Mythos Black Metallic");
+        let bl = new CarColor("bl-", "blue", "Mythos Black Metallic");
+        let yw = new CarColor("yw-", "yellow", "Mythos Black Metallic");
+        let rd = new CarColor("rd-", "red", "Mythos Black Metallic");
 
-        allSquares.forEach(function(sq) {
-            sq.addEventListener("click", function() {
+        let allSquaresOrdered = [bkSq, chSq, slSq, whSq, nvSq, blSq, ywSq, rdSq];
+        let allColorsOrdered = [bk, ch, sl, wh, nv, bl, yw, rd];
 
+        // Add an event listener to each color square, and invoke the bodyColorChange function when a square is clicked
+        for (let i = 0; i < allSquaresOrdered.length; i++) {
+            allSquaresOrdered[i].addEventListener("click", function() {
 
-
+                let currentColor = allColorsOrdered[i];
+                bodyColorChange(currentColor["colorCode"], currentColor["colorName"], allSquaresOrdered[i], currentColor["fullColorName"]);
             });
-        });
-
-
-
-
-
-
-
-        // black square
-        bkSq.addEventListener("click", function () {
-            bodyColorChange("bk-", "black", bkSq, "Mythos Black Metallic");
-        });
-
-        // charcoal square
-        chSq.addEventListener("click", function () {
-            bodyColorChange("ch-", "charcoal", chSq, "Daytona Grey Pearlescent");
-        });
-
-        // silver square
-        slSq.addEventListener("click", function () {
-            bodyColorChange("sl-", "silver", slSq, "Suzuka Grey Metallic");
-        });
-
-        // white square
-        whSq.addEventListener("click", function () {
-            bodyColorChange("wh-", "white", whSq, "Ibis White");
-        });
-
-        // navy square
-        nvSq.addEventListener("click", function () {
-            bodyColorChange("nv-", "navy", nvSq, "Ascari Blue Metallic");
-        });
-
-        // blue square
-        blSq.addEventListener("click", function () {
-            bodyColorChange("bl-", "blue", blSq, "Ara Blue crystal");
-        });
-
-        // yellow square
-        ywSq.addEventListener("click", function () {
-            bodyColorChange("yw-", "yellow", ywSq, "Vegas Yellow");
-        });
-
-        // red square
-        rdSq.addEventListener("click", function () {
-            bodyColorChange("rd-", "red", rdSq, "Tango Red Metallic");
-        });
+        }
 
         // CAR WHEELS/RIMS
         // update custom image when square is clicked
@@ -358,9 +332,7 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
                 header.classList.remove("show-header");
             }
         }
-
         window.addEventListener("scroll", showHeader);
-
     }
 
     else {
@@ -419,9 +391,9 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         // if window is in the menu transition width (range is extended because if it's too close to the breakpoint (i.e. 767-769), we can still see the menu transitioning
         if (width >= 700 && width <= 800) {
             // remove the transition property (so that we can't see the menu transition from desktop to mobile position)
-           menu.style.transition = 'none';
+            menu.style.transition = 'none';
 
-           // add the transition property back right after
+            // add the transition property back right after
             function addMenuTransition() {
                 menu.style.transition = '0.5s all ease';
             }
@@ -429,7 +401,6 @@ document.addEventListener('DOMContentLoaded',(loaded) => {
         }
     }
     window.addEventListener('resize', removeMenuTransition);
-
     /* --------------------------------------- */
     /*    CAR CONFIGURATION DROP DOWN MENU     */
     /* --------------------------------------- */
