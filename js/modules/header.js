@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
 
     function hamburgerMenu(header) {
         // get burger element
-        var hamburger = document.querySelector(".hamburger");
+        let hamburger = document.querySelector(".hamburger");
         // get menu element
-        var menu = document.querySelector("nav ul");
+        let menu = document.querySelector("nav ul");
         // get wrapper element
-        var wrapper = document.querySelector(".wrapper");
+        let wrapper = document.querySelector(".wrapper");
 
         // variable to toggle menu on/off
-        var toggle = 0;
+        let toggle = 0;
 
         // open/close hamburger menu
         function toggleMenu() {
@@ -70,12 +70,12 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
     /*         DISPLAY HEADER ON SCROLL        */
     /* --------------------------------------- */
 
-    var header;
+    let header;
 
     function initializeHeader() {
         // check if we are on the home page
         if (document.getElementById("home-page")) {
-            //var header = document.getElementById("header-fade-in");
+
             header = document.getElementById("header-fade-in");
 
             function showHeader() {
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
 
             window.addEventListener("scroll", showHeader);
         } else {
-            var header = document.getElementById("static-header");
+            let header = document.getElementById("static-header");
         }
 
         hamburgerMenu(header);

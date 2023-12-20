@@ -9,20 +9,20 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
         {
 
             // get the selected configuration name
-            var configSelected = document.getElementById("config-selected");
+            let configSelected = document.getElementById("config-selected");
 
             // get the dropdown menu and its value
-            var configMenu = document.getElementById("config-menu");
-            var configMenuValue = document.getElementById("config-menu").value;
+            let configMenu = document.getElementById("config-menu");
+            let configMenuValue = document.getElementById("config-menu").value;
 
             // get the table value elements (desktop and mobile tables)
-            var configPrice = document.querySelectorAll(".config-price");
-            var configEngine = document.querySelectorAll(".config-engine");
-            var configTransmission = document.querySelectorAll(".config-transmission");
-            var configDrivetrain = document.querySelectorAll(".config-drivetrain");
-            var configFuel = document.querySelectorAll(".config-fuel");
-            var configHP = document.querySelectorAll(".config-hp");
-            var configTorque = document.querySelectorAll(".config-torque");
+            let configPrice = document.querySelectorAll(".config-price");
+            let configEngine = document.querySelectorAll(".config-engine");
+            let configTransmission = document.querySelectorAll(".config-transmission");
+            let configDrivetrain = document.querySelectorAll(".config-drivetrain");
+            let configFuel = document.querySelectorAll(".config-fuel");
+            let configHP = document.querySelectorAll(".config-hp");
+            let configTorque = document.querySelectorAll(".config-torque");
 
             // Create a CarTrim class
             class CarTrim {

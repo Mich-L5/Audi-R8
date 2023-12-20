@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
         // check if we are on the home page
         if (document.getElementById("home-page")) {
 
-            var mastheadBG = document.getElementById("home-masthead-overlay-img");
+            let mastheadBG = document.getElementById("home-masthead-overlay-img");
 
             // Variable to calculate the second bg image opacity based on how far user has scrolled
             let scrollPercent = 0;
@@ -56,13 +56,13 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
     /* --------------------------------------- */
 
     function adjustMasthead() {
-        var width = window.innerWidth;
+        let width = window.innerWidth;
 
         // check if we are on the home page
 
         if (document.getElementById("home-page"))
         {
-            var mastheadBg = document.getElementById("home-masthead-img");
+            let mastheadBg = document.getElementById("home-masthead-img");
             let height = window.innerHeight;
 
             function resizeMasthead() {

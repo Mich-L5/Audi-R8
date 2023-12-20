@@ -14,54 +14,54 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
             /* ------------------------- */
 
             // get img element
-            var img = document.querySelector(".customize-img");
+            let img = document.querySelector(".customize-img");
 
             // get gradient bar element
-            var bar = document.querySelector(".color-bar");
+            let bar = document.querySelector(".color-bar");
 
             // get button elements
-            var allTrimBtns = document.querySelectorAll(".car-trim-btn");
-            var coupeBtn = document.querySelectorAll(".car-trim-btn")[0];
-            var spyderBtn = document.querySelectorAll(".car-trim-btn")[1];
+            let allTrimBtns = document.querySelectorAll(".car-trim-btn");
+            let coupeBtn = document.querySelectorAll(".car-trim-btn")[0];
+            let spyderBtn = document.querySelectorAll(".car-trim-btn")[1];
 
             // get color square elements
-            var allColorSq = document.querySelectorAll(".color-option-container");
-            var bkSq = document.querySelectorAll(".color-option-container")[0];
-            var chSq = document.querySelectorAll(".color-option-container")[1];
-            var slSq = document.querySelectorAll(".color-option-container")[2];
-            var whSq = document.querySelectorAll(".color-option-container")[3];
-            var nvSq = document.querySelectorAll(".color-option-container")[4];
-            var blSq = document.querySelectorAll(".color-option-container")[5];
-            var ywSq = document.querySelectorAll(".color-option-container")[6];
-            var rdSq = document.querySelectorAll(".color-option-container")[7];
+            let allColorSq = document.querySelectorAll(".color-option-container");
+            let bkSq = document.querySelectorAll(".color-option-container")[0];
+            let chSq = document.querySelectorAll(".color-option-container")[1];
+            let slSq = document.querySelectorAll(".color-option-container")[2];
+            let whSq = document.querySelectorAll(".color-option-container")[3];
+            let nvSq = document.querySelectorAll(".color-option-container")[4];
+            let blSq = document.querySelectorAll(".color-option-container")[5];
+            let ywSq = document.querySelectorAll(".color-option-container")[6];
+            let rdSq = document.querySelectorAll(".color-option-container")[7];
 
             // get rims/wheels square elements
-            var allRimssq = document.querySelectorAll(".wheel-selector-container img");
-            var bkRimsSq = document.querySelectorAll(".wheel-selector-container img")[0];
-            var glRimsSq = document.querySelectorAll(".wheel-selector-container img")[1];
+            let allRimssq = document.querySelectorAll(".wheel-selector-container img");
+            let bkRimsSq = document.querySelectorAll(".wheel-selector-container img")[0];
+            let glRimsSq = document.querySelectorAll(".wheel-selector-container img")[1];
 
             // get text elements
-            var bodyColorText = document.getElementById("color-choice");
-            var rimsColorText = document.getElementById("wheel-choice");
-            var priceText = document.getElementById("price");
+            let bodyColorText = document.getElementById("color-choice");
+            let rimsColorText = document.getElementById("wheel-choice");
+            let priceText = document.getElementById("price");
 
             /* ------------------------- */
             /*       2. Set vars         */
             /* ------------------------- */
 
             // set default img path variables
-            var trim = "cp-";
-            var body = "bk-";
-            var rims = "bk";
+            let trim = "cp-";
+            let body = "bk-";
+            let rims = "bk";
 
             // set default img path
-            var imgDir = "./img/customize/";
-            var imgPath = "r8-" + trim + body + rims;
+            let imgDir = "./img/customize/";
+            let imgPath = "r8-" + trim + body + rims;
 
             // set default alt tag values
-            var carTrim = "coupe";
-            var carColor = "black";
-            var rimsColor = "black";
+            let carTrim = "coupe";
+            let carColor = "black";
+            let rimsColor = "black";
 
             /* ------------------------- */
             /*    3. Helper functions    */

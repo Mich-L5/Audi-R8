@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
     function customScrollBar() {
         if (window.innerWidth >= 1024) {
             // scrollbar functionality
-            var docHeight = document.body.scrollHeight - window.innerHeight;
+            let docHeight = document.body.scrollHeight - window.innerHeight;
             window.addEventListener("scroll", scrollbar);
             window.addEventListener("resize", scrollbar);
 
