@@ -74,7 +74,8 @@ header ul li {
     margin: 0 20px;
 }
 
-/*** MASTHEAD ***/
+/*** INDEX PAGE ***/
+/* masthead */
 .masthead-image {
     background-size: cover;
     background-repeat: no-repeat;
@@ -117,12 +118,12 @@ header ul li {
     padding-bottom: 170px;
 }
 
-/*** TIMELINE ***/
+/*** timeline ***/
 .timeline {
     padding: 20px 30px 110px 30px;
     position: relative;
-    /* Source: https://getoutlines.com/blueprints/6614/2008-audi-r8-coupe-blueprints */
-    /* Source: https://drawingdatabase.com/audi-r8-v10-spyder-quattro-2019/ */
+    /* source: https://getoutlines.com/blueprints/6614/2008-audi-r8-coupe-blueprints */
+    /* source: https://drawingdatabase.com/audi-r8-v10-spyder-quattro-2019/ */
     background-image: url("../img/audi-drawings.jpg");
     background-size: cover;
     background-position: center;
@@ -250,7 +251,7 @@ header ul li {
     align-items: center;
 }
 
-/*** INTERACTIVE CAR CUSTOMIZATION ***/
+/*** interactive car customization ***/
 .customize h2 {
     font-size: 40px;
     margin-bottom: 0px;
@@ -393,7 +394,6 @@ header ul li {
     margin-bottom: 40px;
 }
 
-
 .buy-btn {
     font-family: 'Alumni Sans', sans-serif;
     font-size: 45px;
@@ -413,6 +413,7 @@ header ul li {
     background-color: #efefef;
 }
 
+/* wheel block */
 .close-up-wheel {
     height: 100vh;
     background-color: #1d1d1d;
@@ -423,6 +424,7 @@ header ul li {
     background-attachment: fixed;
 }
 
+/* quattro */
 .quattro {
     height: 100vh;
     background-image: url("../img/winter-audi-logo.jpg");
@@ -474,6 +476,7 @@ header ul li {
     font-size: 16px;
 }
 
+/* snow animation */
 .snow-container {
     height: 100%;
     width: 100%;
@@ -484,7 +487,6 @@ header ul li {
     justify-content: space-around;
 }
 
-/*** SNOW ANIMATION ***/
 .snowflake {
     width: 12px;
     height: 12px;
@@ -550,6 +552,7 @@ header ul li {
     animation-delay: -14s;
 }
 
+/* specs */
 .specs {
     height: 700px;
 }
@@ -579,6 +582,7 @@ header ul li {
     font-size: 16px;
 }
 
+/* test drive */
 .video-bg {
     width: 100%;
     height: auto;
@@ -624,6 +628,7 @@ header ul li {
     text-align: center;
 }
 
+/* inventory */
 .inventory {
     height: 800px;
     text-align: center;
@@ -655,7 +660,6 @@ header ul li {
 }
 
 .inventory p {
-    margin: 0 30px;
     font-size: 23px;
     font-family: 'PT Sans Narrow', sans-serif;
     margin: 60px 30px 70px 30px;
@@ -711,6 +715,7 @@ header ul li {
     margin-top: 40px;
 }
 
+/*** FOOTER ***/
 footer {
     display: flex;
     flex-direction: column;
@@ -800,6 +805,7 @@ footer i {
     display: flex;
 }
 
+/*** ABOUT AND CONTACT PAGES ***/
 .secondary-masthead {
     background-color: #0e0e0e;
     width: 100%;
@@ -863,6 +869,7 @@ footer i {
     letter-spacing: 1px;
 }
 
+/* contact form */
 .contact-form fieldset {
     border: none;
     display: flex;
@@ -919,6 +926,7 @@ footer i {
     background-color: #e1e1e1;
 }
 
+/*** PRODUCT PAGE ***/
 .product-masthead {
     height: 80vh;
     width: 100%;
@@ -947,7 +955,7 @@ footer i {
     width: 250px;
 }
 
-.product-img-block{
+.product-img-block {
     height: 100vh;
     background-image: url("../img/audi-r8-back-view.jpg");
     background-size: cover;
@@ -956,12 +964,13 @@ footer i {
     background-attachment: fixed;
 }
 
+/* config table */
 .configurations {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* image source: https://dyler.com/blog/456/rear-wheel-drive-makes-a-comeback-to-audi-r8-lineup */
+    /* source: https://dyler.com/blog/456/rear-wheel-drive-makes-a-comeback-to-audi-r8-lineup */
     background-image: url("../img/audi-r8-interior.jpg");
     background-size: cover;
     background-position: center;
@@ -1026,9 +1035,10 @@ table {
     margin-bottom: 60px;
 }
 
+/* engine block */
 .engine {
     height: 90vh;
-    /* image source: https://www.audi-mediacenter.com/en/photos/detail/audi-r8-v10-21605 */
+    /* source: https://www.audi-mediacenter.com/en/photos/detail/audi-r8-v10-21605 */
     background-image: url("../img/audi-r8-engine-faded.jpg");
     background-attachment: fixed;
     background-position: center;
@@ -1061,6 +1071,7 @@ table {
     line-height: 35px;
 }
 
+/* coupe and spyder block */
 .coupe-and-spyder-block {
     /* source: https://www.audi-mediacenter.com/en/photos/detail/audi-r8-v10-rwd-coupe-audi-r8-v10-rwd-spyder-86612  */
     background-image: url("../img/audi-coupe-and-spyder.jpeg");
@@ -1069,7 +1080,7 @@ table {
     height: 500px;
 }
 
-/* MEDIA QUERIES */
+/************* MEDIA QUERIES *************/
 
 @media screen and (max-width: 1285px){
     .quattro-text h2 {
@@ -1144,13 +1155,13 @@ table {
 
     #thumb-container {
         height: 100vh;
-        /*background-color: rgba(225, 225, 225, 0.25);*/
+        /* background-color: rgba(225, 225, 225, 0.25); */
         width: 17px;
         position: fixed;
         right: 0;
         z-index: 999;
         border-radius: 15px;
-        /*border: 0.5px solid #b9b9b9;*/
+        /* border: 0.5px solid #b9b9b9; */
         opacity: 0;
         transition: .8s ease all;
     }
@@ -1517,10 +1528,6 @@ table {
     .timeline h2 {
         font-size: 50px;
     }
-    /*
-    .address-container div {
-        margin: 0 10px;
-    }*/
 
     .specs {
         height: 600px;
@@ -1532,16 +1539,20 @@ table {
 }
 
 @media screen and (max-width: 480px) {
+
     .address-container {
         display: none;
     }
+
     footer nav {
         display: none;
     }
+
     .img-container {
         flex-direction: row;
         margin-bottom: 0;
     }
+
     footer > div:nth-child(1) {
         margin-bottom: 10px;
 
@@ -1549,6 +1560,7 @@ table {
     footer {
         padding-top: 15px;
     }
+
     .img-container img:nth-child(2) {
         height: 35px;
         margin-top: 15px;
@@ -1560,6 +1572,7 @@ table {
 }
 
 @media screen and (max-width: 470px) {
+
     .customize-img {
         width: 350px;
     }
@@ -1584,29 +1597,6 @@ table {
         margin-top: 70px;
     }
 
-    /*
-    .address-container {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-
-    .address-container small, .address-container address {
-        font-size: 25px;
-
-    }
-
-    .address-container div {
-        margin-top: 10px;
-
-    }
-
-    .copyright-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }*/
-
     .contact-form {
         width: 300px;
     }
@@ -1616,8 +1606,8 @@ table {
     }
 }
 
-
 @media screen and (max-width: 425px) {
+
     .quattro-text h2 {
         margin-top: -100px;
         font-size: 75px;
@@ -1637,6 +1627,7 @@ table {
 }
 
 @media screen and (max-width: 410px) {
+
     .customize-img {
         width: 310px;
     }
@@ -1652,6 +1643,7 @@ table {
 }
 
 @media screen and (max-width: 395px) {
+
     .timeline h2 {
         font-size: 38px;
         margin: -10px 15px 60px 15px;
@@ -1671,6 +1663,7 @@ table {
 }
 
 @media screen and (max-width: 385px) {
+
     .engine {
         background-position-y: -95px;
     }
@@ -1743,8 +1736,8 @@ table {
     }
 }
 
-
 @media screen and (max-width: 330px) {
+
     .engine {
         background-position-y: -100px;
     }
