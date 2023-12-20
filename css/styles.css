@@ -735,7 +735,7 @@ footer a, footer small {
     letter-spacing: 0.5px;
 }
 
-footer > div > div:nth-child(2) li {
+footer > div .action-menu li {
     margin-bottom: 18px;
 }
 
@@ -1229,7 +1229,7 @@ table {
         background-color: rgba(0, 0, 0, 0.8);
     }
 
-    nav a {
+    header nav a {
         color: #0e0e0e;
         font-size: 28px;
         margin-bottom: 25px;
@@ -1241,7 +1241,7 @@ table {
         border-bottom: #0e0e0e solid 0.5px;
     }
 
-    nav ul {
+    header nav ul {
         flex-direction: column;
         background-color: #ececec;
         height: 100vh;
@@ -1291,7 +1291,7 @@ table {
     }
 
     /* disable parallax on mobile */
-    .close-up-wheel, .close-up-logo, .engine, .product-img-block, .about, .contact {
+    .close-up-wheel, .inventory, .close-up-logo, .engine, .product-img-block, .about, .contact {
         background-attachment: scroll;
     }
 
@@ -1333,6 +1333,17 @@ table {
     .product-masthead {
         height: 80vh;
         width: 100%;
+    }
+
+    .img-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    footer img {
+        height: 50px;
+        margin: 7px 7px 7px 25px;
     }
 }
 
@@ -1477,6 +1488,12 @@ table {
     }
 }
 
+@media screen and (max-width: 610px) {
+    .action-menu {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 550px) {
 
     .specs-details h3 {
@@ -1500,10 +1517,10 @@ table {
     .timeline h2 {
         font-size: 50px;
     }
-
+    /*
     .address-container div {
         margin: 0 10px;
-    }
+    }*/
 
     .specs {
         height: 600px;
@@ -1514,6 +1531,33 @@ table {
     }
 }
 
+@media screen and (max-width: 480px) {
+    .address-container {
+        display: none;
+    }
+    footer nav {
+        display: none;
+    }
+    .img-container {
+        flex-direction: row;
+        margin-bottom: 0;
+    }
+    footer > div:nth-child(1) {
+        margin-bottom: 10px;
+
+    }
+    footer {
+        padding-top: 15px;
+    }
+    .img-container img:nth-child(2) {
+        height: 35px;
+        margin-top: 15px;
+    }
+
+    .copyright-container small {
+        font-size: 14px;
+    }
+}
 
 @media screen and (max-width: 470px) {
     .customize-img {
@@ -1540,6 +1584,7 @@ table {
         margin-top: 70px;
     }
 
+    /*
     .address-container {
         flex-direction: column;
         align-items: flex-start;
@@ -1560,7 +1605,7 @@ table {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-    }
+    }*/
 
     .contact-form {
         width: 300px;
