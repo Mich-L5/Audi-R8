@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
         if (document.getElementById("product-page"))
         {
 
-            // get the selected configuration name
+            // Get the selected configuration name
             let configSelected = document.getElementById("config-selected");
 
-            // get the dropdown menu and its value
+            // Get the dropdown menu and its value
             let configMenu = document.getElementById("config-menu");
             let configMenuValue = document.getElementById("config-menu").value;
 
-            // get the table value elements (desktop and mobile tables)
+            // Get the table value elements (desktop and mobile tables)
             let configPrice = document.querySelectorAll(".config-price");
             let configEngine = document.querySelectorAll(".config-engine");
             let configTransmission = document.querySelectorAll(".config-transmission");
@@ -67,11 +67,11 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
                 configSelected.textContent = carTrim["name"];
             }
 
-            // function to update the configuration table based on which value is selected from dropdown menu
+            // Function to update the configuration table based on which value is selected from dropdown menu
             function updateConfigTable() {
                 configMenuValue = document.getElementById("config-menu").value;
 
-                // switch statement to display table values based on option selected
+                // Switch statement to display table values based on option selected
                 switch(configMenuValue) {
                     case "1":
                         updateTableData(coupeV10RWD);
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
                 }
             }
 
-            // event listener that listens for a change in the menu
+            // Event listener that listens for a change in the menu
             configMenu.addEventListener("change", updateConfigTable);
         }
     }

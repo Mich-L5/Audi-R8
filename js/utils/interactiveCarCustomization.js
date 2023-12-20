@@ -13,18 +13,18 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
             /*    1. Get DOM elements    */
             /* ------------------------- */
 
-            // get img element
+            // Get img element
             let img = document.querySelector(".customize-img");
 
-            // get gradient bar element
+            // Get gradient bar element
             let bar = document.querySelector(".color-bar");
 
-            // get button elements
+            // Get button elements
             let allTrimBtns = document.querySelectorAll(".car-trim-btn");
             let coupeBtn = document.querySelectorAll(".car-trim-btn")[0];
             let spyderBtn = document.querySelectorAll(".car-trim-btn")[1];
 
-            // get color square elements
+            // Get color square elements
             let allColorSq = document.querySelectorAll(".color-option-container");
             let bkSq = document.querySelectorAll(".color-option-container")[0];
             let chSq = document.querySelectorAll(".color-option-container")[1];
@@ -35,12 +35,12 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
             let ywSq = document.querySelectorAll(".color-option-container")[6];
             let rdSq = document.querySelectorAll(".color-option-container")[7];
 
-            // get rims/wheels square elements
+            // Get rims/wheels square elements
             let allRimssq = document.querySelectorAll(".wheel-selector-container img");
             let bkRimsSq = document.querySelectorAll(".wheel-selector-container img")[0];
             let glRimsSq = document.querySelectorAll(".wheel-selector-container img")[1];
 
-            // get text elements
+            // Get text elements
             let bodyColorText = document.getElementById("color-choice");
             let rimsColorText = document.getElementById("wheel-choice");
             let priceText = document.getElementById("price");
@@ -49,16 +49,16 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
             /*       2. Set vars         */
             /* ------------------------- */
 
-            // set default img path variables
+            // Set default img path variables
             let trim = "cp-";
             let body = "bk-";
             let rims = "bk";
 
-            // set default img path
+            // Set default img path
             let imgDir = "./img/customize/";
             let imgPath = "r8-" + trim + body + rims;
 
-            // set default alt tag values
+            // Set default alt tag values
             let carTrim = "coupe";
             let carColor = "black";
             let rimsColor = "black";
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
             /* ------------------------- */
 
             // IMAGE
-            // function to update image path and alt tag
+            // Function to update image path and alt tag
             function updateImg() {
                 imgPath = "r8-" + trim + body + rims + ".jpg";
                 img.setAttribute("src", imgDir + imgPath);
@@ -77,16 +77,16 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
             }
 
             // CAR TRIM
-            // function to update customized car image when trim change occurs
+            // Function to update customized car image when trim change occurs
             function trimChange(trimChange, trimAlt, btn) {
 
-                // deselected all buttons (style wise)
+                // Deselected all buttons (style wise)
                 for (let i = 0; i < allTrimBtns.length; i++) {
                     allTrimBtns[i].classList.remove("selected-btn");
                     allTrimBtns[i].classList.add("unselected-btn");
                 }
 
-                // only select the button that has been clicked on (style wise)
+                // Only select the button that has been clicked on (style wise)
                 btn.classList.add("selected-btn");
                 btn.classList.remove("unselected-btn");
 
@@ -94,12 +94,12 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
                 carTrim = trimAlt;
                 updateImg();
 
-                // update price
-                // spyder
+                // Update price
+                // Spyder
                 if (btn.innerHTML == "<div>Spyder</div>") {
                     priceText.innerText = "Starting at $171,000"
                 }
-                // coupe
+                // Coupe
                 else {
                     priceText.innerText = "Starting at $158,600"
                 }
@@ -109,49 +109,51 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
             // function to update customized car image when body color change occurs
             function bodyColorChange(bodyChange, bodyAlt, sq, colorText) {
 
-                // deselected all squares (style wise)
+                // Deselected all squares (style wise)
                 for (let i = 0; i < allColorSq.length; i++) {
                     allColorSq[i].classList.remove("selected");
                 }
 
-                // only select the square that has been clicked on (style wise)
+                // Only select the square that has been clicked on (style wise)
                 sq.classList.add("selected");
 
                 body = bodyChange;
                 carColor = bodyAlt;
                 updateImg();
 
-                // update the gradient bar color
-                // get color square background value
+                // Update the gradient bar color
+                // Get color square background value
                 let bgColor = sq.childNodes;
                 let bgProperty = getComputedStyle(bgColor[0]).getPropertyValue("background-image");
-                // get the color value
+
+                // Get the color value
                 let colorValue = bgProperty.split(" ", 6);
                 colorValue = colorValue[3] + colorValue[4] + colorValue[5];
                 let rgb = colorValue.slice(0, colorValue.length - 1);
-                // update the bar's color
+
+                // Update the bar's color
                 bar.style.backgroundImage = "linear-gradient(to right, white," + rgb + ",white)";
 
-                // update text
+                // Update text
                 bodyColorText.innerText = colorText;
             }
 
             // CAR WHEELS/RIMS
-            // function to update customized car image when rims/wheels change occurs
+            // Function to update customized car image when rims/wheels change occurs
             function rimsChange(rimsChange, rimsAlt, sq, rimsText) {
 
-                // deselected all squares (style wise)
+                // Deselected all squares (style wise)
                 allRimssq[0].classList.remove("selected");
                 allRimssq[1].classList.remove("selected");
 
-                // only select the square that has been clicked on (style wise)
+                // Only select the square that has been clicked on (style wise)
                 sq.classList.add("selected");
 
                 rims = rimsChange;
                 rimsColor = rimsAlt;
                 updateImg();
 
-                // update text
+                // Update text
                 rimsColorText.innerText = rimsText;
             }
 
@@ -161,19 +163,19 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
             /* ------------------------- */
 
             // CAR TRIM
-            // update custom image when button is clicked
-            // coupe btn
+            // Update custom image when button is clicked
+            // Coupe btn
             coupeBtn.addEventListener("click", function () {
                 trimChange("cp-", "coupe", coupeBtn);
             });
 
-            // spyder btn
+            // Spyder btn
             spyderBtn.addEventListener("click", function () {
                 trimChange("sp-", "spyder", spyderBtn);
             });
 
             // CAR BODY COLOR
-            // update custom image when square is clicked
+            // Update custom image when square is clicked
             // Create a CarColor class
             class CarColor {
                 constructor(colorCode, colorName, fullColorName) {
@@ -205,13 +207,13 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
             }
 
             // CAR WHEELS/RIMS
-            // update custom image when square is clicked
-            // black rims square
+            // Update custom image when square is clicked
+            // Black rims square
             bkRimsSq.addEventListener("click", function () {
                 rimsChange("bk", "black", bkRimsSq, "20\" milled cut design, anthracite black wheels");
             });
 
-            // gold rims square
+            // Gold rims square
             glRimsSq.addEventListener("click", function () {
                 rimsChange("gl", "gold", glRimsSq, "20\" 5-V-spoke evo design, matte bronze wheels");
             });

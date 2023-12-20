@@ -5,17 +5,18 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
     /* --------------------------------------- */
 
     function hamburgerMenu(header) {
-        // get burger element
+
+        // Get burger element
         let hamburger = document.querySelector(".hamburger");
-        // get menu element
+        // Get menu element
         let menu = document.querySelector("nav ul");
-        // get wrapper element
+        // Get wrapper element
         let wrapper = document.querySelector(".wrapper");
 
-        // variable to toggle menu on/off
+        // Variable to toggle menu on/off
         let toggle = 0;
 
-        // open/close hamburger menu
+        // Open/close hamburger menu
         function toggleMenu() {
             // if menu is closed, open it, add menu wrapper, and darken header
             if (toggle == 0) {
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
                 wrapper.classList.add("wrapper-active");
             }
 
-            // if menu is opened, close it, remove menu wrapper, and remove darkened header class
+            // If menu is opened, close it, remove menu wrapper, and remove darkened header class
             else {
                 toggle = 0;
                 menu.classList.remove("open-menu");
@@ -34,10 +35,10 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
             }
         }
 
-        // add click event listener to hamburger
+        // Add click event listener to hamburger
         hamburger.addEventListener("click", toggleMenu);
 
-        // add click event listener to menu bg
+        // Add click event listener to menu bg
         wrapper.addEventListener("click", function () {
             // if menu is open and menu bg is clicked on, close the menu
             if (toggle == 1) {
@@ -48,7 +49,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
             }
         });
 
-        // remove the transition effect on header when menu resizes from desktop to mobile
+        // Remove the transition effect on header when menu resizes from desktop to mobile
         function removeMenuTransition() {
             // if window is in the menu transition width (range is extended because if it's too close to the breakpoint (i.e. 767-769), we can still see the menu transitioning
             if (window.innerWidth >= 700 && window.innerWidth <= 800) {
@@ -73,7 +74,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
     let header;
 
     function initializeHeader() {
-        // check if we are on the home page
+        // Check if we are on the home page
         if (document.getElementById("home-page")) {
 
             header = document.getElementById("header-fade-in");

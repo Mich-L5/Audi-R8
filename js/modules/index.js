@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
     /* --------------------------------------- */
 
     function fadeInCarLights() {
-        // check if we are on the home page
+        // Check if we are on the home page
         if (document.getElementById("home-page")) {
 
             let mastheadBG = document.getElementById("home-masthead-overlay-img");
@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
                 }
 
                 function turnOnHeadlights(scrollDistance) {
+
                     // Set bg elements to the same height
                     let bgHeight = document.getElementById("home-masthead-img").offsetHeight;
                     document.getElementById("home-masthead-overlay-img").style.height = bgHeight + "px";
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
     function adjustMasthead() {
         let width = window.innerWidth;
 
-        // check if we are on the home page
+        // Check if we are on the home page
 
         if (document.getElementById("home-page"))
         {
@@ -67,12 +68,12 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
 
             function resizeMasthead() {
 
-                // get window width
+                // Get window width
                 width = window.innerWidth;
 
                 if (width <= 1170) {
 
-                    // map current width to the range below:
+                    // Map current width to the range below:
                     // 320px W = 245px H, 1170px W = 780px H
                     height = window.innerHeight;
                     let newHeight = (780 - 245) * (width - 320) / (1170 - 320) + 245;
@@ -83,7 +84,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
                 }
             }
 
-            // invoke resizeMasthead on load and whenever window is resized
+            // Invoke resizeMasthead on load and whenever window is resized
             resizeMasthead();
             window.addEventListener("resize", resizeMasthead);
         }
