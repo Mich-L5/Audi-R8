@@ -17,11 +17,15 @@
 ## Features
 Some of my favorite features of the website are:
 
+### Custom Scrollbar
+On desktop screens, the website displays a custom scrollbar throughout the website that has the Audi rings logo as the scrollbar thumb.
+
 ### Dynamic Headlights
 Upon landing on the Home page, a full-size masthead of the Audi R8 appears. As the user scrolls down, the car's headlights gradually turn on. As the user scrolls back up, the car's headlights gradually turn off.
 
-### Custom Scrollbar
-On desktop screens, the website displays a custom scrollbar throughout the website that has the Audi rings logo as the scrollbar thumb.
+![Audi R8 with headlights off](https://michalaforest-readme.netlify.app/audi-r8/audi-R8-lights-off.jpg)
+
+![Audi R8 with headlights on](https://michalaforest-readme.netlify.app/audi-r8/audi-R8-lights-on.jpg)
 
 ### Interactive Car Customization
 On the Home and Product pages, the user can interact with a customization tool and create their own custom Audi R8 using the following options:
@@ -29,8 +33,12 @@ On the Home and Product pages, the user can interact with a customization tool a
 * **Color** (![#000000](https://placehold.co/15x15/000000/000000.png), ![#4b4b4b](https://placehold.co/15x15/4b4b4b/4b4b4b.png), ![#b0b0b0](https://placehold.co/15x15/b0b0b0/b0b0b0.png), ![#ececec](https://placehold.co/15x15/ececec/ececec.png), ![#2e4580](https://placehold.co/15x15/2e4580/2e4580.png), ![#0233ff](https://placehold.co/15x15/0233ff/0233ff.png), ![#f5d502](https://placehold.co/15x15/f5d502/f5d502.png), ![#a40000](https://placehold.co/15x15/a40000/a40000.png))
 * **Rims** (black or gold)
 
+![Audi R8 interactive car customization](https://michalaforest-readme.netlify.app/audi-r8/audi-R8-customization.jpg)
+
 ### Interactive Car Trim Table 
 On the Product page, the user can use a select menu and choose one out of the five Audi R8 trims available. Based on the user's choice, the table underneath is autopopulated with information about the car's specific trim such as the price, engine, fuel economy, horsepower, etc.
+
+![Audi R8 interactive car trim table](https://michalaforest-readme.netlify.app/audi-r8/audi-R8-configurations.png)
 
 ## Live Website
 The website is currently hosted on Netlify, and can be accessed [here](https://michalaforest-audi-r8.netlify.app/).
