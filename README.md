@@ -26,7 +26,7 @@ On desktop screens, the website displays a custom scrollbar throughout the websi
 ### Interactive Car Customization
 On the Home and Product pages, the user can interact with a customization tool and create their own custom Audi R8 using the following options:
 * **Body** (coupe or spyder)
-* **Color** (`#000000`![#000000](https://placehold.co/15x15/000000/000000.png), `#4b4b4b`, `#b0b0b0`, `#ececec`, `#2e4580`, `#0233ff`, `#f5d502`, `#a40000`)
+* **Color** (![#000000](https://placehold.co/15x15/000000/000000.png), ![#4b4b4b](https://placehold.co/15x15/4b4b4b/4b4b4b.png), ![#b0b0b0](https://placehold.co/15x15/b0b0b0/b0b0b0.png), ![#ececec](https://placehold.co/15x15/ececec/ececec.png), ![#2e4580](https://placehold.co/15x15/2e4580/2e4580.png), ![#0233ff](https://placehold.co/15x15/0233ff/0233ff.png), ![#f5d502](https://placehold.co/15x15/f5d502/f5d502.png), ![#a40000](https://placehold.co/15x15/a40000/a40000.png))
 * **Rims** (black or gold)
 
 ### Interactive Car Trim Table 
