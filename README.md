@@ -1,6 +1,16 @@
-# Welcome to my [Audi R8 website](https://michalaforest-audi-r8.netlify.app/)!
+# Audi R8
+<picture>
+  <img alt="Developer badge" src="https://img.shields.io/badge/Developer-Mich--L5-dc022a?logo=github&logoColor=white">
+</picture>
+<picture>
+  <img alt="Designer badge" src="https://img.shields.io/badge/Designer-Mich--L5-e6e6e6?logo=github&logoColor=white">
+</picture>
 
-## Description
+![Audi-R8-preview](https://github.com/user-attachments/assets/1c7d2753-eb4f-43e9-86a0-a18a42cb80a8)
+
+
+
+## About
 [This is a website all about the Audi R8](https://michalaforest-audi-r8.netlify.app/). I originally created it for a school project, and decided to continue working on it afterwards and add it to my portfolio. The website has 4 pages:
 * ### Home
   The Home page contains general information about the Audi R8, and multiple calls to action.
