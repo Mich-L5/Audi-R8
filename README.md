@@ -1,6 +1,6 @@
 # Audi R8
 <picture>
-  <img alt="Developer badge" src="https://img.shields.io/badge/Developer-Mich--L5-dc022a?logo=github&logoColor=white">
+  <img alt="Developer badge" src="https://img.shields.io/badge/Developer-Mich--L5-eb1e26?logo=github&logoColor=white">
 </picture>
 <picture>
   <img alt="Designer badge" src="https://img.shields.io/badge/Designer-Mich--L5-e6e6e6?logo=github&logoColor=white">
@@ -9,26 +9,27 @@
 ![Audi-R8-preview](https://github.com/user-attachments/assets/1c7d2753-eb4f-43e9-86a0-a18a42cb80a8)
 
 
-
 ## About
-[This is a website all about the Audi R8](https://michalaforest-audi-r8.netlify.app/). I originally created it for a school project, and decided to continue working on it afterwards and add it to my portfolio. The website has 4 pages:
-* ### Home
-  The Home page contains general information about the Audi R8, and multiple calls to action.
-* ### Product
-  The Product page contains specific information and details about the different Audi R8 trims, and multiple calls to action.
-* ### About
-  The About page contains a brief paragraph about the Audi R8.
-* ### Contact
-  The Contact page contains a contact form (for design purposes only - it is currently not connected to a server).
+This is a website about the Audi R8 that includes a home page, product page, about page, and contact page.
 
-> [!NOTE]
-> Certain links on the website are external links such as _Buy Today_, _Book a Test Drive_, _Browse Pre-Owned Inventory_, and _Find a Local Dealer_.
+## Live site
+This live site can be accessed [here](https://michalaforest-audi-r8.netlify.app/).
+
+## Technologies
+<picture>
+  <img alt="HTML badge" src="https://img.shields.io/badge/HTML-dc022a">
+</picture>
+<picture>
+  <img alt="CSS badge" src="https://img.shields.io/badge/CSS-e2e2e2">
+</picture>
+<picture>
+  <img alt="JS badge" src="https://img.shields.io/badge/JavaScript-565656">
+</picture>
 
 ## Features
-Some of my favorite features of the website are:
 
 ### Custom Scrollbar
-On desktop screens, the website displays a custom scrollbar throughout the website that has the Audi rings logo as the scrollbar thumb.
+On desktop screens, the website displays a custom scrollbar with the Audi rings logo as the scrollbar thumb.
 
 ### Dynamic Headlights
 Upon landing on the Home page, a full-size masthead of the Audi R8 appears. As the user scrolls down, the car's headlights gradually turn on. As the user scrolls back up, the car's headlights gradually turn off.
@@ -42,5 +43,5 @@ On the Home and Product pages, the user can interact with a customization tool a
 ### Interactive Car Trim Table 
 On the Product page, the user can use a select menu and choose one out of the five Audi R8 trims available. Based on the user's choice, the table underneath is autopopulated with information about the car's specific trim such as the price, engine, fuel economy, horsepower, etc.
 
-## Live Website
-The website is currently hosted on Netlify, and can be accessed [here](https://michalaforest-audi-r8.netlify.app/).
+### Responsive
+The website is responsive on mobile, tablet, and desktop.
