@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",(loaded) => {
+document.addEventListener("DOMContentLoaded", (loaded) => {
 
     /* --------------------------------------- */
     /*     MASTHEAD BG - FADE CAR LIGHTS ON    */
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
 
 
                     // If the user is scrolling between 0px-scroll distance on the y axis
-                    scrollPercent = (window.scrollY)/scrollDistance;
+                    scrollPercent = (window.scrollY) / scrollDistance;
 
                     if (scrollPercent <= scrollDistance) {
 
@@ -61,8 +61,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
 
         // Check if we are on the home page
 
-        if (document.getElementById("home-page"))
-        {
+        if (document.getElementById("home-page")) {
             let mastheadBg = document.getElementById("home-masthead-img");
             let height = window.innerHeight;
 

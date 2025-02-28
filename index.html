@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,313 +18,333 @@
     <script src="js/modules/header.js" defer></script>
     <script src="js/modules/index.js" defer></script>
     <script src="https://kit.fontawesome.com/36e897625c.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-<header id="header-fade-in">
-    <div>
-        <a href="index.html"><img src="./img/logo.png" alt="Audi R8 logo"></a>
-    </div>
-    <!-- hamburger -->
-    <div class="hamburger">
-        <span class="burger-bar"></span>
-        <span class="burger-bar"></span>
-        <span class="burger-bar"></span>
-    </div>
-    <div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="product.html">2023 Audi R8</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<!-- CUSTOM SCROLLBAR -->
-<div id="thumb-container">
-    <img id="scrollbar-thumb" src="img/rings-logo.png" alt="audi rings icon">
-</div>
-
-
-<main id="home-page">
-    <!-- header wrapper -->
-    <div class="wrapper"></div>
-
-    <!-- masthead -->
-    <section class="masthead">
-        <div class="masthead-image" id="home-masthead-img"></div>
-        <div class="masthead-image" id="home-masthead-overlay-img"></div>
-        <div class="masthead-title">
-            <h1>AUDI R8</h1>
-            <h2>The All-New 2023 Audi R8</h2>
+    <header id="header-fade-in">
+        <div>
+            <a href="index.html"><img src="./img/logo.png" alt="Audi R8 logo"></a>
         </div>
-    </section>
+        <!-- hamburger -->
+        <div class="hamburger">
+            <span class="burger-bar"></span>
+            <span class="burger-bar"></span>
+            <span class="burger-bar"></span>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">2023 Audi R8</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!-- customize -->
-    <!-- sources (images, color names, and rims/wheel names):
+    <!-- CUSTOM SCROLLBAR -->
+    <div id="thumb-container">
+        <img id="scrollbar-thumb" src="img/rings-logo.png" alt="audi rings icon">
+    </div>
+
+
+    <main id="home-page">
+        <!-- header wrapper -->
+        <div class="wrapper"></div>
+
+        <!-- masthead -->
+        <section class="masthead">
+            <div class="masthead-image" id="home-masthead-img"></div>
+            <div class="masthead-image" id="home-masthead-overlay-img"></div>
+            <div class="masthead-title">
+                <h1>AUDI R8</h1>
+                <h2>The All-New 2023 Audi R8</h2>
+            </div>
+        </section>
+
+        <!-- customize -->
+        <!-- sources (images, color names, and rims/wheel names):
     https://www.audi.ca/ca/web/en/models/r8/r8-spyder.html,
     https://www.audi.ca/ca/web/en/models/r8/r8-coupe.html -->
-    <section class="customize">
-        <h2>Customize Your 2023 Audi R8</h2>
-        <h3 id="price">Starting at $158,600</h3>
-        <div class="car-trim-btn-container">
-            <div class="car-trim-btn selected-btn"><div>Coupe</div></div>
-            <div class="car-trim-btn unselected-btn"><div>Spyder</div></div>
-        </div>
-        <img class="customize-img" src="./img/customize/r8-cp-bk-bk.jpg" alt="black coupe R8 with black rims">
-        <!-- color selector -->
-        <div class="color-selector-container">
-            <div class="color-bar">
-                <span class="color-option-container selected"><span class="color-option"></span></span>
-                <span class="color-option-container"><span class="color-option"></span></span>
-                <span class="color-option-container"><span class="color-option"></span></span>
-                <span class="color-option-container"><span class="color-option"></span></span>
-                <span class="color-option-container"><span class="color-option"></span></span>
-                <span class="color-option-container"><span class="color-option"></span></span>
-                <span class="color-option-container"><span class="color-option"></span></span>
-                <span class="color-option-container"><span class="color-option"></span></span>
-            </div>
-        </div>
-        <small id="color-choice">Mythos Black Metallic</small>
-        <!-- wheel selector -->
-        <div class="wheel-selector-container">
-            <img class="selected" src="./img/black-wheel.png" alt="car wheel with black rims">
-            <img src="./img/gold-wheel.png" alt="car wheel with gold rims">
-        </div>
-        <small id="wheel-choice">20" milled cut design, anthracite black wheels</small>
-        <a href="https://www.audi.ca/ca/web/en/models/r8.html" target="_blank" class="buy-btn"><div>Buy Today</div></a>
-    </section>
-
-    <!-- closeup audi logo -->
-    <section class="close-up-logo"></section>
-
-    <!-- timeline -->
-    <!-- source: https://www.autoevolution.com/audi/r8/ -->
-    <section class="timeline">
-        <h2>The Audi R8 Over the Years</h2>
-        <div class="timeline-container">
-            <span class="timeline-bar"></span>
-            <!-- Model 1 -->
-            <div class="timeline-element timeline-left">
-                <div>
-                    <img src="img/r8-model1.jpg" alt="black Audi R8 (2007-2012 model)">
-                    <h3>Audi R8 V8</h3>
-                    <small>2007-2012</small>
-                    <p>In 2006, Audi introduced the first generation of the R8: a 420HP V8 2-seat
-                        all-wheel drive supercar. The car was small, lightweight,
-                        and originally available as a coupe (the Spyder model came later in 2008). This first 2007 model
-                        was available in both a 6-speed manual transmission and a 6-speed automatic transmission.</p>
-                    <span class="left-arrow"></span>
+        <section class="customize">
+            <h2>Customize Your 2023 Audi R8</h2>
+            <h3 id="price">Starting at $158,600</h3>
+            <div class="car-trim-btn-container">
+                <div class="car-trim-btn selected-btn">
+                    <div>Coupe</div>
+                </div>
+                <div class="car-trim-btn unselected-btn">
+                    <div>Spyder</div>
                 </div>
             </div>
-
-            <!-- Model 2 -->
-            <div class="timeline-element timeline-right">
-                <div>
-                    <img src="./img/r8-model2.jpg" alt="Audi R8 (2008-2012 model)">
-                    <h3>Audi R8 V10</h3>
-                    <small>2008-2012</small>
-                    <p>While very similar to the existing 2007 R8 model, Audi then came out with a V10 version in 2008. With
-                        this model, the headlights received an LED system upgrade, along with some chrome accents
-                        on the grill frame. Audi also installed a multimedia information display which connected to the Bang & Olufsen sound system.
-                    </p>
-                    <span class="right-arrow"></span>
+            <img class="customize-img" src="./img/customize/r8-cp-bk-bk.jpg" alt="black coupe R8 with black rims">
+            <!-- color selector -->
+            <div class="color-selector-container">
+                <div class="color-bar">
+                    <span class="color-option-container selected"><span class="color-option"></span></span>
+                    <span class="color-option-container"><span class="color-option"></span></span>
+                    <span class="color-option-container"><span class="color-option"></span></span>
+                    <span class="color-option-container"><span class="color-option"></span></span>
+                    <span class="color-option-container"><span class="color-option"></span></span>
+                    <span class="color-option-container"><span class="color-option"></span></span>
+                    <span class="color-option-container"><span class="color-option"></span></span>
+                    <span class="color-option-container"><span class="color-option"></span></span>
                 </div>
             </div>
+            <small id="color-choice">Mythos Black Metallic</small>
+            <!-- wheel selector -->
+            <div class="wheel-selector-container">
+                <img class="selected" src="./img/black-wheel.png" alt="car wheel with black rims">
+                <img src="./img/gold-wheel.png" alt="car wheel with gold rims">
+            </div>
+            <small id="wheel-choice">20" milled cut design, anthracite black wheels</small>
+            <a href="https://www.audi.ca/ca/web/en/models/r8.html" target="_blank" class="buy-btn">
+                <div>Buy Today</div>
+            </a>
+        </section>
 
-            <!-- Model 3 -->
-            <div class="timeline-element timeline-left">
-                <div>
-                    <img src="./img/r8-model3.jpg" alt="Audi R8 (2012-2015 model)">
-                    <h3>Audi R8 V8</h3>
-                    <small>2012-2015</small>
-                    <p>In 2012, Audi introduced a mild facelift for the R8. The car
-                        received some enhancements, including full LED headlights and taillights. </p>
-                    <span class="left-arrow"></span>
+        <!-- closeup audi logo -->
+        <section class="close-up-logo"></section>
+
+        <!-- timeline -->
+        <!-- source: https://www.autoevolution.com/audi/r8/ -->
+        <section class="timeline">
+            <h2>The Audi R8 Over the Years</h2>
+            <div class="timeline-container">
+                <span class="timeline-bar"></span>
+                <!-- Model 1 -->
+                <div class="timeline-element timeline-left">
+                    <div>
+                        <img src="img/r8-model1.jpg" alt="black Audi R8 (2007-2012 model)">
+                        <h3>Audi R8 V8</h3>
+                        <small>2007-2012</small>
+                        <p>In 2006, Audi introduced the first generation of the R8: a 420HP V8 2-seat
+                            all-wheel drive supercar. The car was small, lightweight,
+                            and originally available as a coupe (the Spyder model came later in 2008). This first 2007
+                            model
+                            was available in both a 6-speed manual transmission and a 6-speed automatic transmission.
+                        </p>
+                        <span class="left-arrow"></span>
+                    </div>
+                </div>
+
+                <!-- Model 2 -->
+                <div class="timeline-element timeline-right">
+                    <div>
+                        <img src="./img/r8-model2.jpg" alt="Audi R8 (2008-2012 model)">
+                        <h3>Audi R8 V10</h3>
+                        <small>2008-2012</small>
+                        <p>While very similar to the existing 2007 R8 model, Audi then came out with a V10 version in
+                            2008. With
+                            this model, the headlights received an LED system upgrade, along with some chrome accents
+                            on the grill frame. Audi also installed a multimedia information display which connected to
+                            the Bang & Olufsen sound system.
+                        </p>
+                        <span class="right-arrow"></span>
+                    </div>
+                </div>
+
+                <!-- Model 3 -->
+                <div class="timeline-element timeline-left">
+                    <div>
+                        <img src="./img/r8-model3.jpg" alt="Audi R8 (2012-2015 model)">
+                        <h3>Audi R8 V8</h3>
+                        <small>2012-2015</small>
+                        <p>In 2012, Audi introduced a mild facelift for the R8. The car
+                            received some enhancements, including full LED headlights and taillights. </p>
+                        <span class="left-arrow"></span>
+                    </div>
+                </div>
+
+                <!-- Model 4 -->
+                <div class="timeline-element timeline-right">
+                    <div>
+                        <img src="./img/r8-model4.jpg" alt="Audi R8 (2012-2015 model)">
+                        <h3>Audi R8 V10</h3>
+                        <small>2012-2015</small>
+                        <p>This Audi R8 model features a 5.2-liter V10 engine
+                            (borrowed from the Lamborghini Gallardo). With
+                            this engine, the R8 can speed up to 100 kph in 3.7 seconds, and
+                            reach a top speed of 318 km/h!
+                        </p>
+                        <span class="right-arrow"></span>
+                    </div>
+                </div>
+
+                <!-- Model 5 -->
+                <div class="timeline-element timeline-left">
+                    <div>
+                        <img src="./img/r8-model5.jpg" alt="Audi R8 (2015-2018 model)">
+                        <h3>Audi R8</h3>
+                        <small>2015-2018</small>
+                        <p>In 2015, Audi introduced the second generation of the Audi R8, which received
+                            a completely new look. Audi also got rid of the V8 engine and manual transmission.
+                            The sleek new look also featured a high-tech interior, as well as sport-bucket seats.</p>
+                        <span class="left-arrow"></span>
+                    </div>
+                </div>
+
+                <!-- Model 6 -->
+                <div class="timeline-element timeline-right">
+                    <div>
+                        <img src="./img/r8-model6.jpg" alt="Audi R8 (2017-2021 model)">
+                        <h3>AUDI R8 V10 RWS</h3>
+                        <small>2017-2021</small>
+                        <p>One of the biggest changes Audi made in 2017 was introducing a rear-wheel drive R8. Although
+                            the car's
+                            appearance was very similar to the previous model, it featured some small changes such as a
+                            black upper
+                            side blade, and an optional red strip that crossed the top of the car.
+                        </p>
+                        <span class="right-arrow"></span>
+                    </div>
+                </div>
+
+                <!-- Model 7 -->
+                <div class="timeline-element timeline-left">
+                    <div>
+                        <img src="./img/r8-model7.jpg" alt="Audi R8 (2018-2023 model)">
+                        <h3>Audi R8 Coupe</h3>
+                        <small>2018-Present</small>
+                        <p>In 2018, the second generation R8 received a facelift. In addition, the
+                            car's 5.2-liter V10 engine received some improvements with the regular R8 V10 Coupe now
+                            delivering 570HP (as opposed to the previous 540), and the R8 V10 Coupe Performance
+                            now delivering 620HP (as opposed to the previous 610). </p>
+                        <span class="left-arrow"></span>
+                    </div>
+                </div>
+
+                <!-- Model 8 -->
+                <div class="timeline-element timeline-right">
+                    <div>
+                        <img src="./img/r8-model8.jpg" alt="Audi R8 (2021-2023 model)">
+                        <h3>AUDI R8 V10 performance RWD</h3>
+                        <small>2021-Present</small>
+                        <p>In 2021, Audi launched its rear-wheel drive Performance version due to the
+                            success that the rear-wheel drive model had received. This version also received
+                            some small appearance changes such as a matte-black singleframe grill.
+                        </p>
+                        <span class="right-arrow"></span>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Model 4 -->
-            <div class="timeline-element timeline-right">
-                <div>
-                    <img src="./img/r8-model4.jpg" alt="Audi R8 (2012-2015 model)">
-                    <h3>Audi R8 V10</h3>
-                    <small>2012-2015</small>
-                    <p>This Audi R8 model features a 5.2-liter V10 engine
-                        (borrowed from the Lamborghini Gallardo). With
-                        this engine, the R8 can speed up to 100 kph in 3.7 seconds, and
-                        reach a top speed of 318 km/h!
-                    </p>
-                    <span class="right-arrow"></span>
+        <!-- closeup wheel -->
+        <section class="close-up-wheel"></section>
+
+        <!-- quattro -->
+        <section class="quattro">
+            <div class="snow-container">
+                <span class="snowflake"></span>
+                <span class="snowflake"></span>
+                <span class="snowflake"></span>
+                <span class="snowflake"></span>
+                <span class="snowflake"></span>
+                <span class="snowflake"></span>
+                <span class="snowflake"></span>
+                <span class="snowflake"></span>
+                <span class="snowflake"></span>
+                <span class="snowflake"></span>
+                <span class="snowflake"></span>
+                <span class="snowflake"></span>
+                <span class="snowflake"></span>
+                <span class="snowflake"></span>
+                <span class="snowflake"></span>
+            </div>
+            <div class="quattro-text">
+                <h2>Audi Quattro</h2>
+                <h3>Experience the Quattro advantage</h3>
+                <p>An all-wheel drive leading edge technology designed
+                    to give you exceptional performance and control in all
+                    seasons.</p>
+                <small>*Select 2023 Audi R8 models</small>
+            </div>
+        </section>
+
+        <!-- specs -->
+        <section class="specs">
+            <div class="specs-details">
+                <h3><span>5.2L V-10</span> Engine.</h3>
+                <h3><span>602 @ 8100 rpm</span> Horsepower.</h3>
+                <h3><span>413 lb-ft @ 6700 rpm</span> Torque.</h3>
+                <small>*Select 2023 Audi R8 models</small>
+            </div>
+        </section>
+
+        <!-- test-drive -->
+        <section class="test-drive">
+            <div class="book-test-drive">
+                <video class="video-bg" autoplay loop muted playsinline>
+                    <source src="./video/r8-test-drive.mp4" type="video/mp4">
+                </video>
+                <h2>Come in and try the Audi R8 today</h2>
+                <a href="https://www.audidowntowntoronto.com/audi-concierge.htm" target="_blank"
+                    class="test-drive-btn">Book a Test Drive</a>
+            </div>
+        </section>
+
+        <!-- inventory -->
+        <section class="inventory">
+            <h2>Pre-Owned Inventory</h2>
+            <h3>Buy with confidence with Audi Certified: <span class="plus">plus</span></h3>
+            <p>Buying with Audi Certified: <span class="plus">plus</span> ensures your vehicle meets
+                Audi standards. Our rigorous inspection process includes mulitple checkpoints on the
+                exterior, interior, engine, undercarriage, and road. You also receive a warranty up to 5 years,
+                or up to 100,000 km from the original in-service date.
+            </p>
+            <div class="inventory-btn-container">
+                <a href="https://www.audi.ca/ca/web/en/cpo.html#layer=/ca/web/en/cpo/layer/Why-buy-certified.html"
+                    target="_blank">Learn More</a>
+                <a href="https://www.audi.ca/ca/web/en/inventory.html" target="_blank">Browse Pre-Owned Inventory</a>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div>
+            <div class="address-container">
+                <div><i class="fa-solid fa-phone"></i><small>+1 (888)-888-AUDI</small></div>
+                <div><i class="fa-solid fa-envelope"></i><small>info@audir8.com</small></div>
+                <div><i class="fa-solid fa-location-dot"></i>
+                    <address>
+                        8 Race Track Rd<br>
+                        Audi City, ON<br>
+                        R8R 8R8
+                    </address>
                 </div>
             </div>
-
-            <!-- Model 5 -->
-            <div class="timeline-element timeline-left">
-                <div>
-                    <img src="./img/r8-model5.jpg" alt="Audi R8 (2015-2018 model)">
-                    <h3>Audi R8</h3>
-                    <small>2015-2018</small>
-                    <p>In 2015, Audi introduced the second generation of the Audi R8, which received
-                        a completely new look. Audi also got rid of the V8 engine and manual transmission.
-                        The sleek new look also featured a high-tech interior, as well as sport-bucket seats.</p>
-                    <span class="left-arrow"></span>
-                </div>
+            <div class="action-menu">
+                <ul>
+                    <li><a href="https://www.audi.ca/ca/web/en/models/r8.html" target="_blank">Buy today</a></li>
+                    <li><a href="https://www.audidowntowntoronto.com/audi-concierge.htm" target="_blank">Book a test
+                            drive</a></li>
+                    <li><a href="https://www.audi.ca/ca/web/en/dealer-search.html?q=&partner_id=" target="_blank">Find a
+                            local dealer</a></li>
+                </ul>
             </div>
-
-            <!-- Model 6 -->
-            <div class="timeline-element timeline-right">
-                <div>
-                    <img src="./img/r8-model6.jpg" alt="Audi R8 (2017-2021 model)">
-                    <h3>AUDI R8 V10 RWS</h3>
-                    <small>2017-2021</small>
-                    <p>One of the biggest changes Audi made in 2017 was introducing a rear-wheel drive R8. Although the car's
-                        appearance was very similar to the previous model, it featured some small changes such as a black upper
-                        side blade, and an optional red strip that crossed the top of the car.
-                    </p>
-                    <span class="right-arrow"></span>
-                </div>
-            </div>
-
-            <!-- Model 7 -->
-            <div class="timeline-element timeline-left">
-                <div>
-                    <img src="./img/r8-model7.jpg" alt="Audi R8 (2018-2023 model)">
-                    <h3>Audi R8 Coupe</h3>
-                    <small>2018-Present</small>
-                    <p>In 2018, the second generation R8 received a facelift. In addition, the
-                        car's 5.2-liter V10 engine received some improvements with the regular R8 V10 Coupe now
-                        delivering 570HP (as opposed to the previous 540), and the R8 V10 Coupe Performance
-                        now delivering 620HP (as opposed to the previous 610). </p>
-                    <span class="left-arrow"></span>
-                </div>
-            </div>
-
-            <!-- Model 8 -->
-            <div class="timeline-element timeline-right">
-                <div>
-                    <img src="./img/r8-model8.jpg" alt="Audi R8 (2021-2023 model)">
-                    <h3>AUDI R8 V10 performance RWD</h3>
-                    <small>2021-Present</small>
-                    <p>In 2021, Audi launched its rear-wheel drive Performance version due to the
-                        success that the rear-wheel drive model had received. This version also received
-                        some small appearance changes such as a matte-black singleframe grill.
-                    </p>
-                    <span class="right-arrow"></span>
-                </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">2023 Audi R8</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="img-container">
+                <img src="./img/logo.png" alt="R8 logo">
+                <img src="./img/audi-logo.png" alt="Audi logo">
             </div>
         </div>
-    </section>
 
-    <!-- closeup wheel -->
-    <section class="close-up-wheel"></section>
-
-    <!-- quattro -->
-    <section class="quattro">
-        <div class="snow-container">
-            <span class="snowflake"></span>
-            <span class="snowflake"></span>
-            <span class="snowflake"></span>
-            <span class="snowflake"></span>
-            <span class="snowflake"></span>
-            <span class="snowflake"></span>
-            <span class="snowflake"></span>
-            <span class="snowflake"></span>
-            <span class="snowflake"></span>
-            <span class="snowflake"></span>
-            <span class="snowflake"></span>
-            <span class="snowflake"></span>
-            <span class="snowflake"></span>
-            <span class="snowflake"></span>
-            <span class="snowflake"></span>
+        <div class="copyright-container">
+            <small>Terms and Conditions</small>
+            <small>Privacy Policy</small>
+            <small>Copyright © 2023</small>
         </div>
-        <div class="quattro-text">
-            <h2>Audi Quattro</h2>
-            <h3>Experience the Quattro advantage</h3>
-            <p>An all-wheel drive leading edge technology designed
-                to give you exceptional performance and control in all
-                seasons.</p>
-            <small>*Select 2023 Audi R8 models</small>
-        </div>
-    </section>
-
-    <!-- specs -->
-    <section class="specs">
-        <div class="specs-details">
-            <h3><span>5.2L V-10</span> Engine.</h3>
-            <h3><span>602 @ 8100 rpm</span> Horsepower.</h3>
-            <h3><span>413 lb-ft @ 6700 rpm</span> Torque.</h3>
-            <small>*Select 2023 Audi R8 models</small>
-        </div>
-    </section>
-
-    <!-- test-drive -->
-    <section class="test-drive">
-        <div class="book-test-drive">
-            <video class="video-bg" autoplay loop muted playsinline>
-                <source src="./video/r8-test-drive.mp4" type="video/mp4">
-            </video>
-            <h2>Come in and try the Audi R8 today</h2>
-            <a href="https://www.audidowntowntoronto.com/audi-concierge.htm" target="_blank" class="test-drive-btn">Book a Test Drive</a>
-        </div>
-    </section>
-
-    <!-- inventory -->
-    <section class="inventory">
-        <h2>Pre-Owned Inventory</h2>
-       <h3>Buy with confidence with Audi Certified: <span class="plus">plus</span></h3>
-        <p>Buying with Audi Certified: <span class="plus">plus</span> ensures your vehicle meets
-        Audi standards. Our rigorous inspection process includes mulitple checkpoints on the
-            exterior, interior, engine, undercarriage, and road. You also receive a warranty up to 5 years,
-            or up to 100,000 km from the original in-service date.
-        </p>
-        <div class="inventory-btn-container">
-            <a href="https://www.audi.ca/ca/web/en/cpo.html#layer=/ca/web/en/cpo/layer/Why-buy-certified.html" target="_blank" >Learn More</a>
-            <a href="https://www.audi.ca/ca/web/en/inventory.html" target="_blank" >Browse Pre-Owned Inventory</a>
-        </div>
-    </section>
-</main>
-<footer id="footer">
-    <div>
-        <div class="address-container">
-            <div><i class="fa-solid fa-phone"></i><small>+1 (888)-888-AUDI</small></div>
-            <div><i class="fa-solid fa-envelope"></i><small>info@audir8.com</small></div>
-            <div><i class="fa-solid fa-location-dot"></i><address>
-                8 Race Track Rd<br>
-                Audi City, ON<br>
-                R8R 8R8
-            </address>
-            </div>
-        </div>
-        <div class="action-menu">
-            <ul>
-                <li><a href="https://www.audi.ca/ca/web/en/models/r8.html" target="_blank">Buy today</a></li>
-                <li><a href="https://www.audidowntowntoronto.com/audi-concierge.htm" target="_blank">Book a test drive</a></li>
-                <li><a href="https://www.audi.ca/ca/web/en/dealer-search.html?q=&partner_id=" target="_blank">Find a local dealer</a></li>
-            </ul>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="product.html">2023 Audi R8</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="img-container">
-            <img src="./img/logo.png" alt="R8 logo">
-            <img src="./img/audi-logo.png" alt="Audi logo">
-        </div>
-    </div>
-
-    <div class="copyright-container">
-        <small>Terms and Conditions</small>
-        <small>Privacy Policy</small>
-        <small>Copyright © 2023</small>
-    </div>
-</footer>
+    </footer>
 </body>
+
 </html>

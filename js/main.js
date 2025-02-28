@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",(loaded) => {
+document.addEventListener("DOMContentLoaded", (loaded) => {
 
     /* --------------------------------------- */
     /*             CUSTOM SCROLLBAR            */
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
 
                 // Calculate the percentage of the window that is currently scrolled down
                 // Using 96% instead of 100% so that the thumb icon does not go off screen
-                let percentage = ((window.scrollY/docHeight) * 96);
+                let percentage = ((window.scrollY / docHeight) * 96);
 
                 // Prevent icon from going all the way to the bottom
                 if (percentage > 96) {

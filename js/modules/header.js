@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",(loaded) => {
+document.addEventListener("DOMContentLoaded", (loaded) => {
 
     /* --------------------------------------- */
     /*              HAMBURGER MENU             */
