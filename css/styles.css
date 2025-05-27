@@ -81,6 +81,7 @@ header ul li {
 .lightsOff
 {
     min-height: 800px;
+    max-height: 1500px;
     height: 140vh;
     width: 100%;
     background-image: url("../img/lights-off.jpg");
@@ -96,6 +97,7 @@ header ul li {
 .lightsOn
 {
     min-height: 800px;
+    max-height: 1500px;
     height: 140vh;
     width: 100%;
     background-image: url("../img/lights-on.jpg");
@@ -108,13 +110,14 @@ header ul li {
     align-items: flex-end;  
     position: absolute;
     top: 0;
-    left: 0;
     opacity: 0;
 }
 
 .scrollLights
 {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .cloudContainer
@@ -1240,6 +1243,18 @@ table {
 }
 
 /************* MEDIA QUERIES *************/
+
+@media screen and (min-width: 1500px) {
+    .lightsOff
+    {
+        background-image: url("../img/lights-off-extended.jpg");
+    }
+    .lightsOn
+    {
+        background-image: url("../img/lights-on-extended.jpg");
+    }
+
+}
 
 @media screen and (max-width: 1285px){
     .quattro-text h2 {
