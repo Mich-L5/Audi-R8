@@ -427,6 +427,7 @@ header ul li {
 /* quattro */
 .quattro {
     height: 100vh;
+    min-height: 850px;
     background-image: url("../img/winter-audi-logo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
