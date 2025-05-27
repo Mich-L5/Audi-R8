@@ -1,94 +1,44 @@
 document.addEventListener("DOMContentLoaded", (loaded) => {
 
     /* --------------------------------------- */
-    /*     MASTHEAD BG - FADE CAR LIGHTS ON    */
+    /*      SCROLL HEADLIGHTS TURN ON          */
     /* --------------------------------------- */
+    document.addEventListener('scroll', function () {
 
-    function fadeInCarLights() {
-        // Check if we are on the home page
-        if (document.getElementById("home-page")) {
+        // Get the lightsOn section
+        const lightsOn = document.querySelector('.lightsOn');
 
-            let mastheadBG = document.getElementById("home-masthead-overlay-img");
+        // Calculate how much of the section has been scrolled
+        const sectionTop = lightsOn.getBoundingClientRect().top;
 
-            // Variable to calculate the second bg image opacity based on how far user has scrolled
-            let scrollPercent = 0;
+        // Calculate the height of the lightsOn
+        const lightsOnHeight = lightsOn.offsetHeight;
 
-            // Whenever the user scrolls or resizes the window, call adjustLightsBg
-            window.addEventListener("scroll", adjustLightsBg);
-            window.addEventListener("resize", adjustLightsBg);
+        // Calculate how much of the section is left to scroll
+        const lightsOnLeftToScroll = lightsOnHeight - scrollY;
+        const lightsOnLeftToScrollPercent = (lightsOnLeftToScroll / lightsOnHeight);
 
-            function adjustLightsBg() {
-                if (window.innerWidth > 768) {
-                    turnOnHeadlights(220);
-                }
-                else if (window.innerWidth > 480) {
-                    turnOnHeadlights(120);
-                }
-                else {
-                    turnOnHeadlights(100);
-                }
+        // Calculate the opacity of the lightsOn section and apply styling 
+        const newOpacity = (1 - lightsOnLeftToScrollPercent) * 5;
+        lightsOn.style.opacity = newOpacity;
 
-                function turnOnHeadlights(scrollDistance) {
+        // Calculate the opacity of the clouds and apply styling
+        const clouds = document.querySelectorAll('.whiteCloud');
 
-                    // Set bg elements to the same height
-                    let bgHeight = document.getElementById("home-masthead-img").offsetHeight;
-                    document.getElementById("home-masthead-overlay-img").style.height = bgHeight + "px";
+        let newCloudOpacity = 1 - newOpacity;
 
-
-                    // If the user is scrolling between 0px-scroll distance on the y axis
-                    scrollPercent = (window.scrollY) / scrollDistance;
-
-                    if (scrollPercent <= scrollDistance) {
-
-                        // Gradually fade in the second background image
-                        mastheadBG.style.backgroundImage = "url('./img/r8-front-view-lights-on.jpg')";
-                        mastheadBG.style.opacity = scrollPercent;
-                    }
-                }
-            }
+        if (newCloudOpacity < 0.3) {
+            newCloudOpacity = 0.3;
         }
-    }
 
-    fadeInCarLights();
-
-    /* --------------------------------------- */
-    /*       ADJUST MASTHEAD HEIGHT WHEN       */
-    /*               VH <= 1170PX              */
-    /* --------------------------------------- */
-
-    function adjustMasthead() {
-        let width = window.innerWidth;
-
-        // Check if we are on the home page
-
-        if (document.getElementById("home-page")) {
-            let mastheadBg = document.getElementById("home-masthead-img");
-            let height = window.innerHeight;
-
-            function resizeMasthead() {
-
-                // Get window width
-                width = window.innerWidth;
-
-                if (width <= 1170) {
-
-                    // Map current width to the range below:
-                    // 320px W = 245px H, 1170px W = 780px H
-                    height = window.innerHeight;
-                    let newHeight = (780 - 245) * (width - 320) / (1170 - 320) + 245;
-                    mastheadBg.style.height = newHeight + "px";
-
-                } else {
-                    mastheadBg.style.height = "100vh";
-                }
-            }
-
-            // Invoke resizeMasthead on load and whenever window is resized
-            resizeMasthead();
-            window.addEventListener("resize", resizeMasthead);
+        if (newOpacity > 0) {
+            clouds.forEach((cloud) => {
+                cloud.style.setProperty('opacity', newCloudOpacity, 'important');
+            });
         }
-    }
 
-    adjustMasthead();
+
+
+    });
 
 });

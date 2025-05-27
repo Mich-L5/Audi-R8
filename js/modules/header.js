@@ -85,15 +85,15 @@ document.addEventListener("DOMContentLoaded", (loaded) => {
 
                 // Desktop
                 if (window.innerWidth > 768) {
-                    scrollDistance = 500;
+                    scrollDistance = 100;
                 }
                 // Tablet
                 else if (window.innerWidth > 480) {
-                    scrollDistance = 350;
+                    scrollDistance = 90;
                 }
                 // Mobile
                 else {
-                    scrollDistance = 150;
+                    scrollDistance = 70;
                 }
 
                 if (window.scrollY > scrollDistance) {

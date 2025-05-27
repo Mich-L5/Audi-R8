@@ -75,47 +75,206 @@ header ul li {
 }
 
 /*** INDEX PAGE ***/
-/* masthead */
-.masthead-image {
-    background-size: cover;
+
+/* NEW mastehead */
+
+.lightsOff
+{
+    min-height: 800px;
+    height: 140vh;
+    width: 100%;
+    background-image: url("../img/lights-off.jpg");
     background-repeat: no-repeat;
-    background-position-y: 65%;
-    background-image: url("../img/r8-front-view.jpg");
-    background-color: black;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
 
-#home-masthead-overlay-img {
+.lightsOn
+{
+    min-height: 800px;
+    height: 140vh;
+    width: 100%;
+    background-image: url("../img/lights-on.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;  
     position: absolute;
     top: 0;
-    width: 100vw;
+    left: 0;
+    opacity: 0;
 }
 
-.masthead-title {
-    background-color: black;
-    margin-top: -2px;
+.scrollLights
+{
     position: relative;
 }
 
-.masthead-title h1 {
-    color: #f4f4f4;
-    font-weight: 300;
-    font-size: 180px;
-    text-align: center;
-    margin: 0 30px;
-    letter-spacing: 20px;
-    padding-top: 40px;
+.cloudContainer
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 15vh;
 }
 
-.masthead-title h2 {
-    font-family: 'Alumni Sans', sans-serif;
-    color: #f4f4f4;
+.cloudContainer img
+{
+    position: absolute;
+    z-index: 5;
+    width: auto;
+    bottom: 40vh;
+}
+
+
+.cloudContainer img:nth-child(1)
+{
+    /* border: green 5px solid; */
+    animation: animateFogV1 25s infinite linear;
+}
+
+.cloudContainer img:nth-child(2)
+{
+    animation: animateFogV2 28s infinite linear;
+}
+
+.cloudContainer img:nth-child(3)
+{
+    /* border: orange 5px solid; */
+    animation: animateFogV1 31s infinite linear;
+    animation-delay: -9s;
+}
+
+.cloudContainer img:nth-child(4)
+{
+    /* border: red 5px solid; */
+    animation: animateFogV2 34s infinite linear;
+}
+
+.cloudContainer img:nth-child(5)
+{
+    /* border: pink 5px solid; */
+    animation: animateFogV1 37s infinite linear;
+    animation-delay: -18s;
+}
+
+.cloudContainer img:nth-child(6)
+{
+    /* border: purple 5px solid; */
+    animation: animateFogV2 40s infinite linear;
+}
+
+.cloudContainer img:nth-child(7)
+{
+    /* border: magenta 5px solid; */
+    animation: animateFogV1 43s infinite linear;
+    animation-delay: -30s;
+}
+
+.cloudContainer img:nth-child(8)
+{
+    /* border: white 5px solid; */
+    animation: animateFogV2 46s infinite linear;
+}
+
+.cloudContainer img:nth-child(9)
+{
+    /* border: black 5px solid; */
+    animation: animateFogV1 49s infinite linear;
+    animation-delay: -44s;
+}
+
+
+@keyframes animateFogV1 {
+    0% {
+        height: 30vh;
+        transform: translate(-60vw, 0vh) rotate(0deg);
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.7;
+        transform: translate(-30vw, -5vh) rotate(90deg);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0, 5vh) rotate(180deg);
+    }
+    75% {
+        opacity: 0.7;
+        transform: translate(30vw, -5vh) rotate(270deg);
+    }
+    100% {
+        height: 90vh;
+        transform: translate(60vw, 0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes animateFogV2 {
+    0% {
+        height: 20vh;
+        transform: translate(-70vw, 0) rotate(0deg);
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.8;
+        transform: translate(-35vw, -3vh) rotate(60deg);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0, 5vh) rotate(180deg);
+    }
+    75% {
+        opacity: 0.8;
+        transform: translate(35vw, -3vh) rotate(240deg);
+    }
+    100% {
+        height: 100vh;
+        transform: translate(70vw, 0) rotate(300deg);
+        opacity: 0;
+    }
+}
+
+.title
+{
+    color: white;
+    font-size: 80px;
     font-weight: 300;
-    font-size: 40px;
+    font-style: normal;
+    margin: 0 0 15px 0;
+    padding: 0 30px;
+   
+}
+
+.subtitle
+{
+    color: white;
+    font-size: 27px;
+    font-family: 'Alumni Sans', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0; 
+}
+
+.titleContainer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
     text-align: center;
-    margin: 0 50px;
-    letter-spacing: 7px;
-    padding-top: 20px;
-    padding-bottom: 170px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding-bottom: 15vh;
 }
 
 /*** timeline ***/
@@ -427,7 +586,7 @@ header ul li {
 /* quattro */
 .quattro {
     height: 100vh;
-    min-height: 850px;
+    min-height: 800px;
     background-image: url("../img/winter-audi-logo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1503,6 +1662,25 @@ table {
     .action-menu {
         display: none;
     }
+
+    .lightsOn, .lightsOff {
+        height: 120vh;
+    }
+}
+
+@media screen and (max-width: 552px) {
+
+    .breakSmallScreens {
+        display: block;
+    }
+
+    .title {
+        line-height: 70px;
+    }
+
+    .titleContainer {
+        padding-bottom: 60px;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -1522,6 +1700,7 @@ table {
         padding-top: 50px;
         padding-bottom: 50px;
     }
+
 }
 
 @media screen and (max-width: 515px) {
@@ -1733,6 +1912,10 @@ table {
 
     .timeline-element p {
         font-size: 15px;
+    }
+
+    .title {
+        font-size: 70px;
     }
 }
 
