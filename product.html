@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,205 +18,215 @@
     <script src="js/utils/carTrimTable.js" defer></script>
     <script src="js/modules/header.js" defer></script>
     <script src="https://kit.fontawesome.com/36e897625c.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-<header id="static-header">
-    <div>
-        <a href="index.html"><img src="./img/logo.png" alt="Audi R8 logo"></a>
+    <header id="static-header">
+        <div>
+            <a href="index.html"><img src="./img/logo.png" alt="Audi R8 logo"></a>
+        </div>
+        <!-- hamburger -->
+        <div class="hamburger">
+            <span class="burger-bar"></span>
+            <span class="burger-bar"></span>
+            <span class="burger-bar"></span>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">2023 Audi R8</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CUSTOM SCROLLBAR -->
+    <div id="thumb-container">
+        <img id="scrollbar-thumb" src="img/rings-logo.png" alt="audi rings icon">
     </div>
-    <!-- hamburger -->
-    <div class="hamburger">
-        <span class="burger-bar"></span>
-        <span class="burger-bar"></span>
-        <span class="burger-bar"></span>
-    </div>
-    <div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="product.html">2023 Audi R8</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
 
-<!-- CUSTOM SCROLLBAR -->
-<div id="thumb-container">
-    <img id="scrollbar-thumb" src="img/rings-logo.png" alt="audi rings icon">
-</div>
+    <main class="product" id="product-page">
+        <!-- header wrapper -->
+        <div class="wrapper"></div>
 
-<main class="product" id="product-page">
-    <!-- header wrapper -->
-    <div class="wrapper"></div>
+        <section class="product-masthead">
+            <h1><span>2nd Generation</span> 2023 Audi R8</h1>
+        </section>
 
-    <section class="product-masthead">
-        <h1><span>The All-New</span> 2023 Audi R8</h1>
-    </section>
-
-    <!-- customize -->
-    <!-- sources (images, color names, and rims/wheel names):
+        <!-- customize -->
+        <!-- sources (images, color names, and rims/wheel names):
     https://www.audi.ca/ca/web/en/models/r8/r8-spyder.html,
     https://www.audi.ca/ca/web/en/models/r8/r8-coupe.html -->
-    <section class="customize">
-        <h2>Customize Your 2023 Audi R8</h2>
-        <h3 id="price">Starting at $158,600</h3>
-        <div class="car-trim-btn-container">
-            <div class="car-trim-btn selected-btn"><div>Coupe</div></div>
-            <div class="car-trim-btn unselected-btn"><div>Spyder</div></div>
-        </div>
-        <img class="customize-img" src="./img/customize/r8-cp-bk-bk.jpg" alt="black coupe R8 with black rims">
-        <!-- color selector -->
-        <div class="color-selector-container">
-            <div class="color-bar">
-                <span class="color-option-container selected"><span class="color-option"></span></span>
-                <span class="color-option-container"><span class="color-option"></span></span>
-                <span class="color-option-container"><span class="color-option"></span></span>
-                <span class="color-option-container"><span class="color-option"></span></span>
-                <span class="color-option-container"><span class="color-option"></span></span>
-                <span class="color-option-container"><span class="color-option"></span></span>
-                <span class="color-option-container"><span class="color-option"></span></span>
-                <span class="color-option-container"><span class="color-option"></span></span>
+        <section class="customize">
+            <h2>Customize Your 2023 Audi R8</h2>
+            <h3 id="price">Starting at $158,600</h3>
+            <div class="car-trim-btn-container">
+                <div class="car-trim-btn selected-btn">
+                    <div>Coupe</div>
+                </div>
+                <div class="car-trim-btn unselected-btn">
+                    <div>Spyder</div>
+                </div>
+            </div>
+            <img class="customize-img" src="./img/customize/r8-cp-bk-bk.jpg" alt="black coupe R8 with black rims">
+            <!-- color selector -->
+            <div class="color-selector-container">
+                <div class="color-bar">
+                    <span class="color-option-container selected"><span class="color-option"></span></span>
+                    <span class="color-option-container"><span class="color-option"></span></span>
+                    <span class="color-option-container"><span class="color-option"></span></span>
+                    <span class="color-option-container"><span class="color-option"></span></span>
+                    <span class="color-option-container"><span class="color-option"></span></span>
+                    <span class="color-option-container"><span class="color-option"></span></span>
+                    <span class="color-option-container"><span class="color-option"></span></span>
+                    <span class="color-option-container"><span class="color-option"></span></span>
+                </div>
+            </div>
+            <small id="color-choice">Mythos Black Metallic</small>
+            <!-- wheel selector -->
+            <div class="wheel-selector-container">
+                <img class="selected" src="./img/black-wheel.png" alt="car wheel with black rims">
+                <img src="./img/gold-wheel.png" alt="car wheel with gold rims">
+            </div>
+            <small id="wheel-choice">20" milled cut design, anthracite black wheels</small>
+
+        </section>
+
+        <section class="product-img-block"></section>
+
+        <section class="specs">
+            <div class="specs-details">
+                <h3><span>5.2L V-10</span> Engine.</h3>
+                <h3><span>602 @ 8100 rpm</span> Horsepower.</h3>
+                <h3><span>413 lb-ft @ 6700 rpm</span> Torque.</h3>
+                <small>*Select 2023 Audi R8 models</small>
+            </div>
+        </section>
+
+        <section class="configurations">
+            <h2>Configurations</h2>
+            <select id="config-menu">
+                <option value="1">Coupe V10 performance RWD</option>
+                <option value="2">Coupe V10 performance quattro</option>
+                <option value="3">Coupe GT RWD</option>
+                <option value="4">Spyder V10 performance RWD</option>
+                <option value="5">Spyder V10 performance quattro</option>
+            </select>
+            <p id="config-selected">Coupe V10 performance RWD</p>
+            <!-- Source https://carbuzz.com/compare/audi-r8-coupe-vs-audi-r8-spyder -->
+            <table class="mobile-table">
+                <tr>
+                    <td>Starting Price</td>
+                    <td class="config-price">$158,600</td>
+                </tr>
+                <tr>
+                    <td>Engine</td>
+                    <td class="config-engine">5.2L V10 Gas</td>
+                </tr>
+                <tr>
+                    <td>Transmission</td>
+                    <td class="config-transmission">7-Speed Automatic</td>
+                </tr>
+                <tr>
+                    <td>Drivetrain</td>
+                    <td class="config-drivetrain">Rear-Wheel Drive</td>
+                </tr>
+                <tr>
+                    <td>Fuel Economy</td>
+                    <td class="config-fuel">City: 14 MPG
+                        <span>Hwy: 23 MPG</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Horsepower</td>
+                    <td class="config-hp">562 hp @ 4475 rpm</td>
+                </tr>
+                <tr>
+                    <td>Torque</td>
+                    <td class="config-torque">406 lb-ft @ 6300 rpm</td>
+                </tr>
+            </table>
+            <table class="desktop-table">
+                <tr>
+                    <td>Starting Price</td>
+                    <td>Engine</td>
+                    <td>Transmission</td>
+                    <td>Drivetrain</td>
+                    <td>Fuel Economy</td>
+                    <td>Horsepower</td>
+                    <td>Torque</td>
+                </tr>
+                <tr>
+                    <td class="config-price">$158,600</td>
+                    <td class="config-engine">5.2L V10 Gas</td>
+                    <td class="config-transmission">7-Speed Automatic</td>
+                    <td class="config-drivetrain">Rear-Wheel Drive</td>
+                    <td class="config-fuel">City: 14 MPG
+                        <span>Hwy: 23 MPG</span>
+                    </td>
+                    <td class="config-hp">562 hp @ 4475 rpm</td>
+                    <td class="config-torque">406 lb-ft @ 6300 rpm</td>
+                </tr>
+            </table>
+
+        </section>
+
+        <section class="engine">
+            <h2>5.2L V-10 Engine</h2>
+            <h3>The AWD model boasts a robust 602HP, 413 lb-ft torque from its 5.2L V-10 engine, while the RWD version
+                offers 562HP, 406 lb-ft torque. Both feature a standard 7-speed S-tronic gearbox.</h3>
+        </section>
+
+        <section class="coupe-and-spyder-block"></section>
+
+    </main>
+    <footer id="footer">
+        <div>
+            <div class="address-container">
+                <div><i class="fa-solid fa-phone"></i><small>+1 (888)-888-AUDI</small></div>
+                <div><i class="fa-solid fa-envelope"></i><small>info@audir8.com</small></div>
+                <div><i class="fa-solid fa-location-dot"></i>
+                    <address>
+                        8 Race Track Rd<br>
+                        Audi City, ON<br>
+                        R8R 8R8
+                    </address>
+                </div>
+            </div>
+            <div class="action-menu">
+                <ul>
+                    <li><a href="https://www.audi.ca/ca/web/en/models/r8.html" target="_blank">Buy today</a></li>
+                    <li><a href="https://www.audidowntowntoronto.com/audi-concierge.htm" target="_blank">Book a test
+                            drive</a></li>
+                    <li><a href="https://www.audi.ca/ca/web/en/dealer-search.html?q=&partner_id=" target="_blank">Find a
+                            local dealer</a></li>
+                </ul>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">2023 Audi R8</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="img-container">
+                <img src="./img/logo.png" alt="R8 logo">
+                <img src="./img/audi-logo.png" alt="Audi logo">
             </div>
         </div>
-        <small id="color-choice">Mythos Black Metallic</small>
-        <!-- wheel selector -->
-        <div class="wheel-selector-container">
-            <img class="selected" src="./img/black-wheel.png" alt="car wheel with black rims">
-            <img src="./img/gold-wheel.png" alt="car wheel with gold rims">
+
+        <div class="copyright-container">
+            <small>Terms and Conditions</small>
+            <small>Privacy Policy</small>
+            <small>Copyright © 2023</small>
         </div>
-        <small id="wheel-choice">20" milled cut design, anthracite black wheels</small>
-        <a href="https://www.audi.ca/ca/web/en/models/r8.html" target="_blank" class="buy-btn"><div>Buy Today</div></a>
-    </section>
-
-    <section class="product-img-block"></section>
-
-    <section class="specs">
-        <div class="specs-details">
-            <h3><span>5.2L V-10</span> Engine.</h3>
-            <h3><span>602 @ 8100 rpm</span> Horsepower.</h3>
-            <h3><span>413 lb-ft @ 6700 rpm</span> Torque.</h3>
-            <small>*Select 2023 Audi R8 models</small>
-        </div>
-    </section>
-
-    <section class="configurations">
-        <h2>Configurations</h2>
-        <select id="config-menu">
-            <option value="1">Coupe V10 performance RWD</option>
-            <option value="2">Coupe V10 performance quattro</option>
-            <option value="3">Coupe GT RWD</option>
-            <option value="4">Spyder V10 performance RWD</option>
-            <option value="5">Spyder V10 performance quattro</option>
-        </select>
-        <p id="config-selected">Coupe V10 performance RWD</p>
-        <!-- Source https://carbuzz.com/compare/audi-r8-coupe-vs-audi-r8-spyder -->
-        <table class="mobile-table">
-            <tr>
-                <td>Starting Price</td>
-                <td class="config-price">$158,600</td>
-            </tr>
-            <tr>
-                <td>Engine</td>
-                <td class="config-engine">5.2L V10 Gas</td>
-            </tr>
-            <tr>
-                <td>Transmission</td>
-                <td class="config-transmission">7-Speed Automatic</td>
-            </tr>
-            <tr>
-                <td>Drivetrain</td>
-                <td class="config-drivetrain">Rear-Wheel Drive</td>
-            </tr>
-            <tr>
-                <td>Fuel Economy</td>
-                <td class="config-fuel">City: 14 MPG
-                    <span>Hwy: 23 MPG</span></td>
-            </tr>
-            <tr>
-                <td>Horsepower</td>
-                <td class="config-hp">562 hp @ 4475 rpm</td>
-            </tr>
-            <tr>
-                <td>Torque</td>
-                <td class="config-torque">406 lb-ft @ 6300 rpm</td>
-            </tr>
-        </table>
-        <table class="desktop-table">
-            <tr>
-                <td>Starting Price</td>
-                <td>Engine</td>
-                <td>Transmission</td>
-                <td>Drivetrain</td>
-                <td>Fuel Economy</td>
-                <td>Horsepower</td>
-                <td>Torque</td>
-            </tr>
-            <tr>
-                <td class="config-price">$158,600</td>
-                <td class="config-engine">5.2L V10 Gas</td>
-                <td class="config-transmission">7-Speed Automatic</td>
-                <td class="config-drivetrain">Rear-Wheel Drive</td>
-                <td class="config-fuel">City: 14 MPG
-                    <span>Hwy: 23 MPG</span></td>
-                <td class="config-hp">562 hp @ 4475 rpm</td>
-                <td class="config-torque">406 lb-ft @ 6300 rpm</td>
-            </tr>
-        </table>
-        <div class="product-btn-container">
-            <a href="https://www.audi.ca/ca/web/en/models/r8.html" target="_blank" >Buy Today</a>
-            <a href="https://www.audidowntowntoronto.com/audi-concierge.htm" target="_blank" >Book a Test Drive</a>
-        </div>
-    </section>
-
-    <section class="engine">
-        <h2>5.2L V-10 Engine</h2>
-        <h3>The AWD model boasts a robust 602HP, 413 lb-ft torque from its 5.2L V-10 engine, while the RWD version offers 562HP, 406 lb-ft torque. Both feature a standard 7-speed S-tronic gearbox.</h3>
-    </section>
-
-    <section class="coupe-and-spyder-block"></section>
-
-</main>
-<footer id="footer">
-    <div>
-        <div class="address-container">
-            <div><i class="fa-solid fa-phone"></i><small>+1 (888)-888-AUDI</small></div>
-            <div><i class="fa-solid fa-envelope"></i><small>info@audir8.com</small></div>
-            <div><i class="fa-solid fa-location-dot"></i><address>
-                8 Race Track Rd<br>
-                Audi City, ON<br>
-                R8R 8R8
-            </address>
-            </div>
-        </div>
-        <div class="action-menu">
-            <ul>
-                <li><a href="https://www.audi.ca/ca/web/en/models/r8.html" target="_blank">Buy today</a></li>
-                <li><a href="https://www.audidowntowntoronto.com/audi-concierge.htm" target="_blank">Book a test drive</a></li>
-                <li><a href="https://www.audi.ca/ca/web/en/dealer-search.html?q=&partner_id=" target="_blank">Find a local dealer</a></li>
-            </ul>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="product.html">2023 Audi R8</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="img-container">
-            <img src="./img/logo.png" alt="R8 logo">
-            <img src="./img/audi-logo.png" alt="Audi logo">
-        </div>
-    </div>
-
-    <div class="copyright-container">
-        <small>Terms and Conditions</small>
-        <small>Privacy Policy</small>
-        <small>Copyright © 2023</small>
-    </div>
-</footer>
+    </footer>
 </body>
+
 </html>
