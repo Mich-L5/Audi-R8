@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",(loaded) => {
+document.addEventListener("DOMContentLoaded", (loaded) => {
 
     /* --------------------------------------- */
     /*      SET CUSTOMIZED CAR IMAGE & TEXT    */
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded",(loaded) => {
 
                 // Update price
                 // Spyder
-                if (btn.innerHTML == "<div>Spyder</div>") {
+                if (btn.innerHTML.includes("Spyder")) {
                     priceText.innerText = "Starting at $171,000"
                 }
                 // Coupe
