@@ -88,7 +88,6 @@ header ul li {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;  
@@ -645,6 +644,8 @@ header ul li {
 /* snow animation */
 .snow-container {
     height: 100%;
+    max-height: 1000px;
+    min-height: 800px;
     width: 100%;
     position: absolute;
     display: flex;
@@ -719,16 +720,16 @@ header ul li {
 }
 
 /* specs */
-.specs {
-    height: 570px;
-}
 
 .specs-details {
-    margin-top: 180px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 160px 30px 100px 30px;
+    position: relative;
+    z-index: 1;
 }
 
 .specs-details h3 {
@@ -761,6 +762,8 @@ header ul li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    z-index: 1;
 }
 
 .test-drive-btn {
@@ -796,7 +799,6 @@ header ul li {
 
 /* inventory */
 .inventory {
-    height: 800px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -806,6 +808,7 @@ header ul li {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    padding: 250px 30px 100px 30px;
 }
 
 .inventory h2 {
@@ -1484,6 +1487,10 @@ table {
         background-position-y: -60px;
     }
 
+    .inventory {
+        padding: 100px 20px 80px 20px;
+    }
+
     .inventory-btn-container, .product-btn-container  {
         flex-direction: column;
     }
@@ -1711,15 +1718,21 @@ table {
         padding-bottom: 50px;
     }
 
+    .video-bg {
+        display: none;
+    }
+
+    .book-test-drive {
+        background-image: url("../img/r8-steering-wheel.jpg");
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 @media screen and (max-width: 515px) {
     .timeline h2 {
         font-size: 50px;
-    }
-
-    .specs {
-        height: 600px;
     }
 
     .specs-details h3 {
@@ -1770,10 +1783,6 @@ table {
         font-size: 35px;
     }
 
-    .specs-details {
-        margin-top: 270px;
-    }
-
     .test-drive-btn {
         width: 240px;
         height: 60px;
@@ -1801,13 +1810,6 @@ table {
         margin-top: 0px
     }
 
-    .specs {
-        height: 650px;
-    }
-
-    .specs-details {
-        margin-top: 270px;
-    }
 }
 
 @media screen and (max-width: 410px) {
